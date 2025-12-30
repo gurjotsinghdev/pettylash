@@ -80,13 +80,12 @@ export default function Home() {
                 </button>
               </div>
               <div className="text-center">
-                <p className="text-[9px] uppercase tracking-[0.35em] text-[color:var(--pl-ink)]/60 sm:text-[10px] sm:tracking-[0.5em]">
-                  Petty Lash
-                </p>
-                <h1 className="font-display text-2xl text-[color:var(--pl-charcoal)] sm:text-3xl">
-                  Petty Lash
-                </h1>
-                <p className="mt-1 text-[9px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/50 sm:text-[10px] sm:tracking-[0.4em]">
+                <img
+                  src="/pettylash-logo.png"
+                  alt="Petty Lash logo"
+                  className="mx-auto h-16 w-auto sm:h-20"
+                />
+                <p className="mt-2 text-[9px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/50 sm:text-[10px] sm:tracking-[0.4em]">
                   Studio + Academy
                 </p>
               </div>
