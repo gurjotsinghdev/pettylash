@@ -1,65 +1,529 @@
-import Image from "next/image";
+const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Community", href: "#community" },
+  { label: "Founder", href: "#founder" },
+  { label: "Masterclass", href: "#masterclass" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Contact", href: "#contact" },
+];
+const navLeft = navLinks.slice(0, 4);
+const navRight = navLinks.slice(4);
+
+const serviceItems = [
+  {
+    title: "Lash Extensions",
+    blurb: "Classic, hybrid, and volume sets customized to your features.",
+  },
+  {
+    title: "Lash Lift + Tint",
+    blurb: "Lifted definition with a soft, natural finish.",
+  },
+  {
+    title: "Aftercare + Retail",
+    blurb: "Professional products to keep your lashes healthy.",
+  },
+];
+
+const galleryItems = [
+  "Studio close-up",
+  "Lash detail",
+  "Training day",
+  "Before + after",
+  "Soft glam",
+  "Product flatlay",
+  "Client selfie",
+  "Behind the scenes",
+];
+
+const reviewCards = [
+  {
+    quote:
+      "The most relaxing beauty appointment. The lash work is flawless.",
+    name: "Liza Brown",
+  },
+  {
+    quote:
+      "Loved the training experience. I left ready to book clients.",
+    name: "Nia Rae",
+  },
+  {
+    quote:
+      "Everything felt premium from start to finish. Highly recommend.",
+    name: "Chelsea K.",
+  },
+  {
+    quote:
+      "Soft glam perfection. The set lasted beautifully.",
+    name: "Lia M.",
+  },
+];
+
+function Placeholder({ label, className }: { label: string; className?: string }) {
+  return (
+    <div
+      className={`relative flex items-center justify-center overflow-hidden rounded-[24px] border border-white/60 bg-[linear-gradient(135deg,#f5e8df_0%,#e7cdbf_45%,#c86f5c_100%)] text-xs font-semibold uppercase tracking-[0.35em] text-white/80 shadow-[0_25px_60px_rgba(91,52,41,0.2)] ${
+        className || ""
+      }`}
+    >
+      <span className="z-10">{label}</span>
+      <div className="absolute -left-16 top-1/3 h-24 w-24 rounded-full bg-white/20 blur-2xl" />
+      <div className="absolute -right-10 bottom-6 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="bg-[color:var(--pl-cream)] text-[color:var(--pl-ink)]">
+      <section
+        id="home"
+        className="relative min-h-[70vh] overflow-hidden bg-[color:var(--pl-blush)] lg:min-h-[82vh]"
+      >
+        <div className="absolute inset-0">
+          <Placeholder
+            label="Hero Image"
+            className="h-full w-full rounded-none text-sm sm:text-base"
+          />
+        </div>
+        <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.25),rgba(43,29,23,0.05))]" />
+
+        <header className="relative z-10">
+          <div className="bg-[color:var(--pl-charcoal)]/80 text-white">
+            <div className="mx-auto max-w-6xl px-6 py-2 text-center text-[10px] uppercase tracking-[0.45em] text-white/70">
+              Limited time: 15% off your first visit with code PETTY15
+            </div>
+          </div>
+          <div className="mx-auto max-w-6xl px-6 py-6 text-white">
+            <div className="grid items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+              <nav className="hidden flex-wrap gap-5 text-[10px] uppercase tracking-[0.35em] text-white/80 lg:flex">
+                {navLeft.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="transition hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+              <div className="text-center">
+                <p className="text-[10px] uppercase tracking-[0.5em] text-white/70">
+                  Petty Lash
+                </p>
+                <h1 className="font-display text-2xl sm:text-3xl">
+                  Petty Lash
+                </h1>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.4em] text-white/60">
+                  Studio + Institute
+                </p>
+              </div>
+              <div className="hidden items-center justify-end gap-5 lg:flex">
+                <nav className="flex flex-wrap justify-end gap-4 text-[10px] uppercase tracking-[0.35em] text-white/80">
+                  {navRight.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="transition hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
+                <div className="flex items-center gap-3 text-white/80">
+                  <button
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
+                    aria-label="Account"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 19.5a7.5 7.5 0 0 1 15 0"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
+                    aria-label="Cart"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 5h2l1.4 9.5a2 2 0 0 0 2 1.7h7.6a2 2 0 0 0 2-1.5L21 8H7"
+                      />
+                      <circle cx="9" cy="19" r="1.4" />
+                      <circle cx="17" cy="19" r="1.4" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <nav className="mt-4 flex flex-wrap justify-center gap-4 text-[10px] uppercase tracking-[0.35em] text-white/80 lg:hidden">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="transition hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <div className="mt-4 flex items-center justify-center gap-3 text-white/80 lg:hidden">
+              <button
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
+                aria-label="Account"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 19.5a7.5 7.5 0 0 1 15 0"
+                  />
+                </svg>
+              </button>
+              <button
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
+                aria-label="Cart"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 5h2l1.4 9.5a2 2 0 0 0 2 1.7h7.6a2 2 0 0 0 2-1.5L21 8H7"
+                  />
+                  <circle cx="9" cy="19" r="1.4" />
+                  <circle cx="17" cy="19" r="1.4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pb-20 pt-6 text-center text-white">
+          <p className="text-xs uppercase tracking-[0.45em] text-white/70">
+            Beauty that saves you time. Skills that change your life.
+          </p>
+          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">
+            Petty Lash
+            <br />
+            Studio + Institute
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm text-white/80 sm:text-base">
+            Luxury lash artistry, curated treatments, and professional
+            certification for rising beauty artists.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <button className="rounded-full bg-[color:var(--pl-rose)] px-7 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-[0_18px_40px_rgba(200,111,92,0.35)] transition hover:-translate-y-0.5 hover:bg-[color:var(--pl-charcoal)]">
+              Book Appointment
+            </button>
+            <button className="rounded-full border border-white/70 px-7 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)]">
+              Explore Courses
+            </button>
+          </div>
+          <div className="mt-6 flex w-full max-w-md flex-col gap-3 rounded-2xl bg-white/90 p-4 text-[color:var(--pl-ink)] shadow-[0_20px_40px_rgba(0,0,0,0.18)] sm:flex-row">
+            <input
+              className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-2 text-sm"
+              placeholder="Appointment"
+            />
+            <button className="rounded-full bg-[color:var(--pl-charcoal)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-20 lg:grid-cols-[0.75fr_1.25fr] lg:items-center"
+      >
+        <Placeholder label="About Image" className="aspect-[3/4] w-full" />
+        <div>
+          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
+            About
+          </p>
+          <h2 className="mt-4 text-4xl">A lash lounge with intention.</h2>
+          <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
+            Petty Lash delivers luxury lash services and boutique training in a
+            serene studio setting. We focus on healthy, long-lasting results and
+            a client-first experience from consultation to aftercare.
+          </p>
+          <p className="mt-4 text-base leading-7 text-[color:var(--pl-ink)]/75">
+            Our academy offers guided education, practical technique, and
+            business support so artists feel confident behind the lash bed and
+            ready to grow.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="bg-[color:var(--pl-cocoa)] px-6 py-16 text-center text-white">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xs uppercase tracking-[0.45em] text-white/70">
+            Celebrating ten years of business.
+          </p>
+          <h2 className="mt-4 text-3xl text-white sm:text-4xl">
+            Be part of our beauty community and get ready for treatments made
+            just for you.
+          </h2>
         </div>
-      </main>
+      </section>
+
+      <section
+        id="services"
+        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
+      >
+        <div>
+          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
+            Our Services
+          </p>
+          <h2 className="mt-4 text-4xl">Tailored lash artistry.</h2>
+          <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
+            Choose from our signature services and treatments designed for
+            effortless, elevated beauty.
+          </p>
+          <div className="mt-8 space-y-4">
+            {serviceItems.map((service) => (
+              <div
+                key={service.title}
+                className="rounded-2xl border border-[color:var(--pl-sand)] bg-white/70 p-5"
+              >
+                <h3 className="text-xl">{service.title}</h3>
+                <p className="mt-2 text-sm text-[color:var(--pl-ink)]/70">
+                  {service.blurb}
+                </p>
+              </div>
+            ))}
+          </div>
+          <button className="mt-8 rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+            Book a Service
+          </button>
+        </div>
+        <Placeholder label="Service Image" className="aspect-square w-full" />
+      </section>
+
+      <section id="community" className="bg-[color:var(--pl-blush)] px-6 py-20">
+        <div className="mx-auto max-w-6xl text-center">
+          <Placeholder
+            label="Community Group Photo"
+            className="aspect-[16/7] w-full"
+          />
+          <h2 className="mt-10 text-4xl">Join Our Beauty Community</h2>
+          <p className="mt-4 text-base text-[color:var(--pl-ink)]/70">
+            Build a future that feels aligned and powerful with education,
+            mentorship, and support.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="founder"
+        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
+      >
+        <Placeholder label="Founder Image" className="aspect-[3/4] w-full" />
+        <div>
+          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
+            All About Our Founder
+          </p>
+          <h2 className="mt-4 text-4xl">Learn the story behind Petty Lash.</h2>
+          <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
+            Our founder blends artistry, wellness, and education to create a
+            studio experience that feels personal and restorative. Each
+            masterclass is built on real studio knowledge and elevated service
+            standards.
+          </p>
+          <p className="mt-4 text-base leading-7 text-[color:var(--pl-ink)]/75">
+            Students receive clear systems, hands-on training, and ongoing
+            mentorship to help them build sustainable lash businesses.
+          </p>
+        </div>
+      </section>
+
+      <section id="masterclass" className="bg-[color:var(--pl-cream)] px-6 py-14">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
+            Which Masterclass is for you?
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <button className="rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+              Classic Lash
+            </button>
+            <button className="rounded-full border border-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)]">
+              Volume Lash
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid gap-0 bg-[color:var(--pl-blush)] lg:grid-cols-[1.05fr_0.95fr]">
+        <Placeholder
+          label="Appointment Image"
+          className="h-full w-full rounded-none"
+        />
+        <div className="flex flex-col items-center justify-center bg-[color:var(--pl-cocoa)] px-8 py-16 text-center text-white">
+          <p className="text-xs uppercase tracking-[0.4em] text-white/70">
+            Lets make appointment
+          </p>
+          <h2 className="mt-4 text-3xl">Book your visit</h2>
+          <p className="mt-4 text-sm text-white/70">
+            Leave your details and we will confirm the best time for you.
+          </p>
+          <div className="mt-6 flex w-full max-w-sm flex-col gap-3">
+            <input
+              className="w-full rounded-full border border-white/30 bg-transparent px-4 py-2 text-sm text-white"
+              placeholder="Full name"
+            />
+            <input
+              className="w-full rounded-full border border-white/30 bg-transparent px-4 py-2 text-sm text-white"
+              placeholder="Phone or email"
+            />
+            <button className="rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-cocoa)]">
+              Send Request
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+        <Placeholder label="Beauty Detail" className="aspect-[3/4] w-full" />
+        <div>
+          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
+            Petty Lash
+          </p>
+          <h2 className="mt-4 text-4xl">The luxury of soft beauty.</h2>
+          <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
+            A quiet studio, curated treatments, and a team that cares about every
+            detail. We create a lash experience that feels as good as it looks.
+          </p>
+        </div>
+      </section>
+
+      <section id="gallery" className="bg-[color:var(--pl-cream)] px-6 pb-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
+                Instagram
+              </p>
+              <h2 className="mt-3 text-4xl">Photo gallery</h2>
+            </div>
+            <button className="rounded-full border border-[color:var(--pl-rose)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
+              Follow Us
+            </button>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {galleryItems.map((item) => (
+              <Placeholder key={item} label={item} className="aspect-[4/5]" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" className="bg-[color:var(--pl-cream)] px-6 py-16">
+        <div className="mx-auto grid max-w-6xl gap-10 border-t border-[color:var(--pl-sand)] pt-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h3 className="text-sm uppercase tracking-[0.35em] text-[color:var(--pl-rose)]">
+              Location
+            </h3>
+            <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
+              18 Mercer Avenue, Suite 4B
+              <br />
+              Los Angeles, CA
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm uppercase tracking-[0.35em] text-[color:var(--pl-rose)]">
+              Services
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm text-[color:var(--pl-ink)]/70">
+              <li>Classic Extensions</li>
+              <li>Hybrid Extensions</li>
+              <li>Volume Extensions</li>
+              <li>Lash Lift + Tint</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm uppercase tracking-[0.35em] text-[color:var(--pl-rose)]">
+              Studio Hours
+            </h3>
+            <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
+              Mon - Fri: 9am - 7pm
+              <br />
+              Sat: 10am - 5pm
+              <br />
+              Sun: Closed
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm uppercase tracking-[0.35em] text-[color:var(--pl-rose)]">
+              Contact
+            </h3>
+            <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
+              (555) 019-2456
+              <br />
+              hello@pettylash.com
+            </p>
+            <button className="mt-4 rounded-full border border-[color:var(--pl-rose)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </footer>
+
+      <section className="bg-[color:var(--pl-cream)] px-6 pb-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {reviewCards.map((review) => (
+              <div
+                key={review.name}
+                className="rounded-2xl border border-[color:var(--pl-sand)] bg-white/90 p-5 shadow-[0_18px_40px_rgba(76,42,34,0.12)]"
+              >
+                <div className="flex gap-1 text-xs text-[color:var(--pl-rose)]">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <span key={index}>★</span>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm text-[color:var(--pl-ink)]/75">
+                  "{review.quote}"
+                </p>
+                <p className="mt-4 text-xs uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/60">
+                  {review.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
