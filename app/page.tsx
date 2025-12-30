@@ -1,15 +1,10 @@
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "Book Now", href: "#contact" },
+  { label: "Training", href: "#founder" },
   { label: "Services", href: "#services" },
-  { label: "Community", href: "#community" },
-  { label: "Founder", href: "#founder" },
-  { label: "Masterclass", href: "#masterclass" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact Us", href: "#contact" },
 ];
-const navLeft = navLinks.slice(0, 4);
-const navRight = navLinks.slice(4);
 
 const serviceItems = [
   {
@@ -37,29 +32,6 @@ const galleryItems = [
   "Behind the scenes",
 ];
 
-const reviewCards = [
-  {
-    quote:
-      "The most relaxing beauty appointment. The lash work is flawless.",
-    name: "Liza Brown",
-  },
-  {
-    quote:
-      "Loved the training experience. I left ready to book clients.",
-    name: "Nia Rae",
-  },
-  {
-    quote:
-      "Everything felt premium from start to finish. Highly recommend.",
-    name: "Chelsea K.",
-  },
-  {
-    quote:
-      "Soft glam perfection. The set lasted beautifully.",
-    name: "Lia M.",
-  },
-];
-
 function Placeholder({ label, className }: { label: string; className?: string }) {
   return (
     <div
@@ -77,189 +49,130 @@ function Placeholder({ label, className }: { label: string; className?: string }
 export default function Home() {
   return (
     <div className="bg-[color:var(--pl-cream)] text-[color:var(--pl-ink)]">
-      <section
-        id="home"
-        className="relative min-h-[70vh] overflow-hidden bg-[color:var(--pl-blush)] lg:min-h-[82vh]"
-      >
-        <div className="absolute inset-0">
-          <Placeholder
-            label="Hero Image"
-            className="h-full w-full rounded-none text-sm sm:text-base"
-          />
-        </div>
-        <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.25),rgba(43,29,23,0.05))]" />
-
-        <header className="relative z-10">
-          <div className="bg-[color:var(--pl-charcoal)]/80 text-white">
-            <div className="mx-auto max-w-6xl px-6 py-2 text-center text-[10px] uppercase tracking-[0.45em] text-white/70">
-              Limited time: 15% off your first visit with code PETTY15
+      <section id="home" className="bg-[color:var(--pl-cream)]">
+        <header className="relative z-10 bg-[color:var(--pl-cream)] text-[color:var(--pl-ink)]">
+          <div className="border-b border-[color:var(--pl-sand)]">
+            <div className="mx-auto max-w-6xl px-6 py-2 text-center text-[10px] uppercase tracking-[0.45em] text-[color:var(--pl-ink)]/70">
+              A new chapter starts here · January enrollment special: $1,000 off
             </div>
           </div>
-          <div className="mx-auto max-w-6xl px-6 py-6 text-white">
+          <div className="mx-auto max-w-6xl px-6 py-6">
             <div className="grid items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
-              <nav className="hidden flex-wrap gap-5 text-[10px] uppercase tracking-[0.35em] text-white/80 lg:flex">
-                {navLeft.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="transition hover:text-white"
+              <div className="hidden items-center gap-3 lg:flex">
+                <button
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--pl-sand)] text-[color:var(--pl-ink)]/70 transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
+                  aria-label="Search"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
                   >
-                    {link.label}
-                  </a>
-                ))}
-              </nav>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m21 21-4.35-4.35m1.1-4.4a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
               <div className="text-center">
-                <p className="text-[10px] uppercase tracking-[0.5em] text-white/70">
+                <p className="text-[10px] uppercase tracking-[0.5em] text-[color:var(--pl-ink)]/60">
                   Petty Lash
                 </p>
-                <h1 className="font-display text-2xl sm:text-3xl">
+                <h1 className="font-display text-2xl text-[color:var(--pl-charcoal)] sm:text-3xl">
                   Petty Lash
                 </h1>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.4em] text-white/60">
-                  Studio + Institute
+                <p className="mt-1 text-[10px] uppercase tracking-[0.4em] text-[color:var(--pl-ink)]/50">
+                  Studio + Academy
                 </p>
               </div>
-              <div className="hidden items-center justify-end gap-5 lg:flex">
-                <nav className="flex flex-wrap justify-end gap-4 text-[10px] uppercase tracking-[0.35em] text-white/80">
-                  {navRight.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="transition hover:text-white"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </nav>
-                <div className="flex items-center gap-3 text-white/80">
-                  <button
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
-                    aria-label="Account"
+              <div className="hidden items-center justify-end gap-3 lg:flex">
+                <button
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--pl-sand)] text-[color:var(--pl-ink)]/70 transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
+                  aria-label="Account"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 19.5a7.5 7.5 0 0 1 15 0"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
-                    aria-label="Cart"
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 19.5a7.5 7.5 0 0 1 15 0"
+                    />
+                  </svg>
+                </button>
+                <button
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--pl-sand)] text-[color:var(--pl-ink)]/70 transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
+                  aria-label="Cart"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
                   >
-                    <svg
-                      aria-hidden="true"
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3 5h2l1.4 9.5a2 2 0 0 0 2 1.7h7.6a2 2 0 0 0 2-1.5L21 8H7"
-                      />
-                      <circle cx="9" cy="19" r="1.4" />
-                      <circle cx="17" cy="19" r="1.4" />
-                    </svg>
-                  </button>
-                </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 5h2l1.4 9.5a2 2 0 0 0 2 1.7h7.6a2 2 0 0 0 2-1.5L21 8H7"
+                    />
+                    <circle cx="9" cy="19" r="1.4" />
+                    <circle cx="17" cy="19" r="1.4" />
+                  </svg>
+                </button>
               </div>
             </div>
-            <nav className="mt-4 flex flex-wrap justify-center gap-4 text-[10px] uppercase tracking-[0.35em] text-white/80 lg:hidden">
+            <nav className="mt-5 flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-[0.35em] text-[color:var(--pl-ink)]/70">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="transition hover:text-white"
+                  className="transition hover:text-[color:var(--pl-rose)]"
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
-            <div className="mt-4 flex items-center justify-center gap-3 text-white/80 lg:hidden">
-              <button
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
-                aria-label="Account"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 7.5a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 19.5a7.5 7.5 0 0 1 15 0"
-                  />
-                </svg>
-              </button>
-              <button
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 transition hover:border-white hover:text-white"
-                aria-label="Cart"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 5h2l1.4 9.5a2 2 0 0 0 2 1.7h7.6a2 2 0 0 0 2-1.5L21 8H7"
-                  />
-                  <circle cx="9" cy="19" r="1.4" />
-                  <circle cx="17" cy="19" r="1.4" />
-                </svg>
-              </button>
-            </div>
           </div>
         </header>
 
-        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pb-20 pt-6 text-center text-white">
-          <p className="text-xs uppercase tracking-[0.45em] text-white/70">
-            Beauty that saves you time. Skills that change your life.
-          </p>
-          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">
-            Petty Lash
-            <br />
-            Studio + Institute
-          </h2>
-          <p className="mt-4 max-w-2xl text-sm text-white/80 sm:text-base">
-            Luxury lash artistry, curated treatments, and professional
-            certification for rising beauty artists.
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <button className="rounded-full bg-[color:var(--pl-rose)] px-7 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-[0_18px_40px_rgba(200,111,92,0.35)] transition hover:-translate-y-0.5 hover:bg-[color:var(--pl-charcoal)]">
-              Book Appointment
-            </button>
-            <button className="rounded-full border border-white/70 px-7 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)]">
-              Explore Courses
-            </button>
-          </div>
-          <div className="mt-6 flex w-full max-w-md flex-col gap-3 rounded-2xl bg-white/90 p-4 text-[color:var(--pl-ink)] shadow-[0_20px_40px_rgba(0,0,0,0.18)] sm:flex-row">
-            <input
-              className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-2 text-sm"
-              placeholder="Appointment"
+        <div className="relative min-h-[60vh] overflow-hidden bg-[color:var(--pl-blush)] lg:min-h-[70vh]">
+          <div className="absolute inset-0">
+            <Placeholder
+              label="Hero Image"
+              className="h-full w-full rounded-none text-sm sm:text-base"
             />
-            <button className="rounded-full bg-[color:var(--pl-charcoal)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
-              Book Now
-            </button>
+          </div>
+          <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.25),rgba(43,29,23,0.05))]" />
+          <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-4xl flex-col items-center justify-center px-6 py-12 text-center text-white lg:min-h-[70vh]">
+            <p className="text-xs uppercase tracking-[0.45em] text-white">
+              Beauty that saves you time. Skills that change your life.
+            </p>
+            <h2 className="mt-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">
+              Petty Lash Studio + Institute
+            </h2>
+            <p className="mt-4 text-[10px] uppercase tracking-[0.35em] text-white">
+              Lash artistry &amp; pro training for modern beauty careers
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <button className="rounded-none bg-white px-8 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5">
+                Appointments
+              </button>
+              <button className="rounded-none border border-white px-8 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)]">
+                Trainings
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -296,6 +209,30 @@ export default function Home() {
             Be part of our beauty community and get ready for treatments made
             just for you.
           </h2>
+        </div>
+      </section>
+
+      <section
+        id="products"
+        className="bg-[color:var(--pl-cream)] px-6 pb-16"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
+                Products
+              </p>
+              <h2 className="mt-3 text-4xl">Petty Lash Professional Products</h2>
+            </div>
+            <button className="rounded-full border border-[color:var(--pl-rose)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
+              Shop Now
+            </button>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {galleryItems.map((item) => (
+              <Placeholder key={item} label={item} className="aspect-[4/5]" />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -369,51 +306,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="masterclass" className="bg-[color:var(--pl-cream)] px-6 py-14">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
-            Which Masterclass is for you?
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <button className="rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white">
-              Classic Lash
-            </button>
-            <button className="rounded-full border border-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)]">
-              Volume Lash
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="grid gap-0 bg-[color:var(--pl-blush)] lg:grid-cols-[1.05fr_0.95fr]">
-        <Placeholder
-          label="Appointment Image"
-          className="h-full w-full rounded-none"
-        />
-        <div className="flex flex-col items-center justify-center bg-[color:var(--pl-cocoa)] px-8 py-16 text-center text-white">
-          <p className="text-xs uppercase tracking-[0.4em] text-white/70">
-            Lets make appointment
-          </p>
-          <h2 className="mt-4 text-3xl">Book your visit</h2>
-          <p className="mt-4 text-sm text-white/70">
-            Leave your details and we will confirm the best time for you.
-          </p>
-          <div className="mt-6 flex w-full max-w-sm flex-col gap-3">
-            <input
-              className="w-full rounded-full border border-white/30 bg-transparent px-4 py-2 text-sm text-white"
-              placeholder="Full name"
-            />
-            <input
-              className="w-full rounded-full border border-white/30 bg-transparent px-4 py-2 text-sm text-white"
-              placeholder="Phone or email"
-            />
-            <button className="rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-cocoa)]">
-              Send Request
-            </button>
-          </div>
-        </div>
-      </section>
-
       <section className="mx-auto grid max-w-6xl gap-10 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
         <Placeholder label="Beauty Detail" className="aspect-[3/4] w-full" />
         <div>
@@ -425,27 +317,6 @@ export default function Home() {
             A quiet studio, curated treatments, and a team that cares about every
             detail. We create a lash experience that feels as good as it looks.
           </p>
-        </div>
-      </section>
-
-      <section id="gallery" className="bg-[color:var(--pl-cream)] px-6 pb-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
-                Instagram
-              </p>
-              <h2 className="mt-3 text-4xl">Photo gallery</h2>
-            </div>
-            <button className="rounded-full border border-[color:var(--pl-rose)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
-              Follow Us
-            </button>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {galleryItems.map((item) => (
-              <Placeholder key={item} label={item} className="aspect-[4/5]" />
-            ))}
-          </div>
         </div>
       </section>
 
@@ -499,31 +370,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      <section className="bg-[color:var(--pl-cream)] px-6 pb-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {reviewCards.map((review) => (
-              <div
-                key={review.name}
-                className="rounded-2xl border border-[color:var(--pl-sand)] bg-white/90 p-5 shadow-[0_18px_40px_rgba(76,42,34,0.12)]"
-              >
-                <div className="flex gap-1 text-xs text-[color:var(--pl-rose)]">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <span key={index}>★</span>
-                  ))}
-                </div>
-                <p className="mt-4 text-sm text-[color:var(--pl-ink)]/75">
-                  "{review.quote}"
-                </p>
-                <p className="mt-4 text-xs uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/60">
-                  {review.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
