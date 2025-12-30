@@ -1,6 +1,6 @@
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Book Now", href: "#contact" },
+  { label: "Book Now", href: "#book" },
   { label: "Training", href: "#founder" },
   { label: "Services", href: "#services" },
   { label: "Contact Us", href: "#contact" },
@@ -52,7 +52,7 @@ export default function Home() {
       <section id="home" className="bg-[color:var(--pl-cream)]">
         <header className="relative z-10 bg-[color:var(--pl-cream)] text-[color:var(--pl-ink)]">
           <div className="border-b border-[color:var(--pl-sand)]">
-            <div className="mx-auto max-w-6xl px-6 py-2 text-center text-[10px] uppercase tracking-[0.45em] text-[color:var(--pl-ink)]/70">
+            <div className="mx-auto max-w-6xl px-6 py-2 text-center text-[9px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/70 sm:text-[10px] sm:tracking-[0.45em]">
               A new chapter starts here · January enrollment special: $1,000 off
             </div>
           </div>
@@ -80,13 +80,13 @@ export default function Home() {
                 </button>
               </div>
               <div className="text-center">
-                <p className="text-[10px] uppercase tracking-[0.5em] text-[color:var(--pl-ink)]/60">
+                <p className="text-[9px] uppercase tracking-[0.35em] text-[color:var(--pl-ink)]/60 sm:text-[10px] sm:tracking-[0.5em]">
                   Petty Lash
                 </p>
                 <h1 className="font-display text-2xl text-[color:var(--pl-charcoal)] sm:text-3xl">
                   Petty Lash
                 </h1>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.4em] text-[color:var(--pl-ink)]/50">
+                <p className="mt-1 text-[9px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/50 sm:text-[10px] sm:tracking-[0.4em]">
                   Studio + Academy
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <nav className="mt-5 flex flex-wrap justify-center gap-6 text-[10px] uppercase tracking-[0.35em] text-[color:var(--pl-ink)]/70">
+            <nav className="mt-5 flex flex-wrap justify-center gap-4 text-[9px] uppercase tracking-[0.25em] text-[color:var(--pl-ink)]/70 sm:gap-6 sm:text-[10px] sm:tracking-[0.35em]">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
@@ -155,27 +155,30 @@ export default function Home() {
             />
           </div>
           <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.25),rgba(43,29,23,0.05))]" />
-          <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-4xl flex-col items-center justify-center px-6 py-12 text-center text-white lg:min-h-[70vh]">
-            <p className="text-xs uppercase tracking-[0.45em] text-white">
+          <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-4xl flex-col items-center justify-center px-5 py-10 text-center text-white sm:px-6 sm:py-12 lg:min-h-[70vh]">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-white sm:text-xs sm:tracking-[0.45em]">
               Beauty that saves you time. Skills that change your life.
             </p>
-            <h2 className="mt-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">
+            <h2 className="mt-5 text-3xl leading-tight sm:text-5xl lg:text-6xl">
               Petty Lash Studio + Institute
             </h2>
-            <p className="mt-4 text-[10px] uppercase tracking-[0.35em] text-white">
+            <p className="mt-4 text-[9px] uppercase tracking-[0.25em] text-white sm:text-[10px] sm:tracking-[0.35em]">
               Lash artistry &amp; pro training for modern beauty careers
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <button className="rounded-none bg-white px-8 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5">
+            <div className="mt-6 flex w-full flex-wrap justify-center gap-4 sm:mt-8">
+              <button className="w-full rounded-none bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-xs">
                 Appointments
               </button>
-              <button className="rounded-none border border-white px-8 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)]">
+              <button className="w-full rounded-none border border-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)] sm:w-auto sm:px-8 sm:text-xs">
                 Trainings
               </button>
             </div>
           </div>
         </div>
-        <div className="relative z-10 mx-auto -mt-10 max-w-4xl px-6 pb-10">
+        <div
+          id="book"
+          className="relative z-10 mx-auto -mt-8 max-w-4xl px-5 pb-10 sm:-mt-10 sm:px-6"
+        >
           <div className="rounded-[24px] border border-[color:var(--pl-sand)] bg-white px-6 py-6 shadow-[0_20px_40px_rgba(76,42,34,0.18)]">
             <div className="flex flex-col gap-2 text-center sm:text-left">
               <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--pl-ink)]/60">
@@ -196,7 +199,7 @@ export default function Home() {
                 className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
                 placeholder="Preferred date"
               />
-              <button className="rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-[color:var(--pl-rose)]">
+              <button className="w-full rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-[color:var(--pl-rose)] md:w-auto">
                 Request
               </button>
             </div>
@@ -206,14 +209,16 @@ export default function Home() {
 
       <section
         id="about"
-        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-20 lg:grid-cols-[0.75fr_1.25fr] lg:items-center"
+        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-16 sm:py-20 lg:grid-cols-[0.75fr_1.25fr] lg:items-center"
       >
         <Placeholder label="About Image" className="aspect-[3/4] w-full" />
         <div>
           <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
             About
           </p>
-          <h2 className="mt-4 text-4xl">A lash lounge with intention.</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">
+            A lash lounge with intention.
+          </h2>
           <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
             Petty Lash delivers luxury lash services and boutique training in a
             serene studio setting. We focus on healthy, long-lasting results and
@@ -241,7 +246,7 @@ export default function Home() {
 
       <section
         id="products"
-        className="bg-[color:var(--pl-cream)] px-6 pb-16 pt-16"
+        className="bg-[color:var(--pl-cream)] px-6 pb-16 pt-16 sm:pt-20"
       >
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-wrap items-center justify-between gap-4">
@@ -249,9 +254,11 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
                 Products
               </p>
-              <h2 className="mt-3 text-4xl">Petty Lash Professional Products</h2>
+              <h2 className="mt-3 text-3xl sm:text-4xl">
+                Petty Lash Professional Products
+              </h2>
             </div>
-            <button className="rounded-full border border-[color:var(--pl-rose)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
+            <button className="w-full rounded-full border border-[color:var(--pl-rose)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)] sm:w-auto">
               Shop Now
             </button>
           </div>
@@ -265,13 +272,15 @@ export default function Home() {
 
       <section
         id="services"
-        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
+        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
       >
         <div>
           <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
             Our Services
           </p>
-          <h2 className="mt-4 text-4xl">Tailored lash artistry.</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">
+            Tailored lash artistry.
+          </h2>
           <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
             Choose from our signature services and treatments designed for
             effortless, elevated beauty.
@@ -289,20 +298,25 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <button className="mt-8 rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+          <button className="mt-8 w-full rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white sm:w-auto">
             Book a Service
           </button>
         </div>
         <Placeholder label="Service Image" className="aspect-square w-full" />
       </section>
 
-      <section id="community" className="bg-[color:var(--pl-blush)] px-6 py-20">
+      <section
+        id="community"
+        className="bg-[color:var(--pl-blush)] px-6 py-16 sm:py-20"
+      >
         <div className="mx-auto max-w-6xl text-center">
           <Placeholder
             label="Community Group Photo"
             className="aspect-[16/7] w-full"
           />
-          <h2 className="mt-10 text-4xl">Join Our Beauty Community</h2>
+          <h2 className="mt-10 text-3xl sm:text-4xl">
+            Join Our Beauty Community
+          </h2>
           <p className="mt-4 text-base text-[color:var(--pl-ink)]/70">
             Build a future that feels aligned and powerful with education,
             mentorship, and support.
@@ -312,14 +326,16 @@ export default function Home() {
 
       <section
         id="founder"
-        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
+        className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
       >
         <Placeholder label="Founder Image" className="aspect-[3/4] w-full" />
         <div>
           <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
             All About Our Founder
           </p>
-          <h2 className="mt-4 text-4xl">Learn the story behind Petty Lash.</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">
+            Learn the story behind Petty Lash.
+          </h2>
           <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
             Our founder blends artistry, wellness, and education to create a
             studio experience that feels personal and restorative. Each
