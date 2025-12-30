@@ -175,6 +175,33 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="relative z-10 mx-auto -mt-10 max-w-4xl px-6 pb-10">
+          <div className="rounded-[24px] border border-[color:var(--pl-sand)] bg-white px-6 py-6 shadow-[0_20px_40px_rgba(76,42,34,0.18)]">
+            <div className="flex flex-col gap-2 text-center sm:text-left">
+              <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--pl-ink)]/60">
+                Book a consultation
+              </p>
+              <h3 className="text-2xl">Reserve your lash consultation.</h3>
+            </div>
+            <div className="mt-6 grid gap-4 md:grid-cols-[1.2fr_1fr_1fr_0.8fr]">
+              <input
+                className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
+                placeholder="Full name"
+              />
+              <input
+                className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
+                placeholder="Email"
+              />
+              <input
+                className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
+                placeholder="Preferred date"
+              />
+              <button className="rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-[color:var(--pl-rose)]">
+                Request
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section
@@ -214,7 +241,7 @@ export default function Home() {
 
       <section
         id="products"
-        className="bg-[color:var(--pl-cream)] px-6 pb-16"
+        className="bg-[color:var(--pl-cream)] px-6 pb-16 pt-16"
       >
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-wrap items-center justify-between gap-4">
@@ -302,20 +329,6 @@ export default function Home() {
           <p className="mt-4 text-base leading-7 text-[color:var(--pl-ink)]/75">
             Students receive clear systems, hands-on training, and ongoing
             mentorship to help them build sustainable lash businesses.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto grid max-w-6xl gap-10 px-6 py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-        <Placeholder label="Beauty Detail" className="aspect-[3/4] w-full" />
-        <div>
-          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
-            Petty Lash
-          </p>
-          <h2 className="mt-4 text-4xl">The luxury of soft beauty.</h2>
-          <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
-            A quiet studio, curated treatments, and a team that cares about every
-            detail. We create a lash experience that feels as good as it looks.
           </p>
         </div>
       </section>
