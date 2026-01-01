@@ -1,4 +1,3 @@
-import Placeholder from "@/app/components/Placeholder";
 import { servicesIntro } from "@/app/data/services";
 
 export default function ServicesHeroSection() {
@@ -19,7 +18,11 @@ export default function ServicesHeroSection() {
           and your celebration moments.
         </p>
       </div>
-      <Placeholder label="Beauty Lounge Image" className="aspect-[4/5] w-full" />
+      <img
+        src="/images/ring-light.jpeg"
+        alt="Petty Lash studio portrait"
+        className="aspect-[4/5] w-full rounded-[24px] object-cover"
+      />
     </section>
   );
 }

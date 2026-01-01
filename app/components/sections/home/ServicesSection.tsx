@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Placeholder from "@/app/components/Placeholder";
 
 const serviceItems = [
   {
@@ -51,7 +50,11 @@ export default function ServicesSection() {
           Book a Service
         </Link>
       </div>
-      <Placeholder label="Service Image" className="aspect-square w-full" />
+      <img
+        src="/images/service-lash.jpeg"
+        alt="Lash service in progress"
+        className="aspect-square w-full rounded-[24px] object-cover"
+      />
     </section>
   );
 }

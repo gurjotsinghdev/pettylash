@@ -1,4 +1,3 @@
-import Placeholder from "@/app/components/Placeholder";
 import { contactDetails } from "@/app/data/contact";
 
 export default function ContactHeroSection() {
@@ -21,7 +20,11 @@ export default function ContactHeroSection() {
           <p>Instagram: {contactDetails.instagram}</p>
         </div>
       </div>
-      <Placeholder label="Studio Front" className="aspect-[4/5] w-full" />
+      <img
+        src="/images/about-mirror.jpeg"
+        alt="Petty Lash studio portrait"
+        className="aspect-[4/5] w-full rounded-[24px] object-cover"
+      />
     </section>
   );
 }

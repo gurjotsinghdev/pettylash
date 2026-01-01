@@ -1,13 +1,13 @@
 import Link from "next/link";
-import Placeholder from "@/app/components/Placeholder";
 
 export default function HomeHeroSection() {
   return (
     <div className="relative min-h-[60vh] overflow-hidden bg-[color:var(--pl-blush)] lg:min-h-[70vh]">
       <div className="absolute inset-0">
-        <Placeholder
-          label="Hero Image"
-          className="h-full w-full rounded-none text-sm sm:text-base"
+        <img
+          src="/images/home-hero.jpeg"
+          alt="Petty Lash hero portrait"
+          className="h-full w-full object-cover"
         />
       </div>
       <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.25),rgba(43,29,23,0.05))]" />

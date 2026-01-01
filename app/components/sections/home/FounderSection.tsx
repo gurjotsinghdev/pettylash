@@ -1,12 +1,14 @@
-import Placeholder from "@/app/components/Placeholder";
-
 export default function FounderSection() {
   return (
     <section
       id="founder"
       className="mx-auto grid max-w-6xl scroll-mt-24 gap-10 px-6 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
     >
-      <Placeholder label="Founder Image" className="aspect-[3/4] w-full" />
+      <img
+        src="/images/founder-seated.jpeg"
+        alt="Petty Lash founder portrait"
+        className="aspect-[3/4] w-full rounded-[24px] object-cover"
+      />
       <div>
         <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
           All About Our Founder

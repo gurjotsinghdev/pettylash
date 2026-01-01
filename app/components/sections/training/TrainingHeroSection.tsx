@@ -1,12 +1,15 @@
 import Link from "next/link";
-import Placeholder from "@/app/components/Placeholder";
 import { trainingIntro } from "@/app/data/training";
 
 export default function TrainingHeroSection() {
   return (
     <section className="relative overflow-hidden bg-[color:var(--pl-blush)]">
       <div className="absolute inset-0">
-        <Placeholder label="Training Hero" className="h-full w-full rounded-none text-sm" />
+        <img
+          src="/images/home-hero.jpeg"
+          alt="Petty Lash Pro training hero"
+          className="h-full w-full object-cover"
+        />
       </div>
       <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.35),rgba(43,29,23,0.08))]" />
       <div className="relative z-10 mx-auto flex min-h-[55vh] max-w-4xl flex-col items-center justify-center px-6 py-12 text-center text-white">
