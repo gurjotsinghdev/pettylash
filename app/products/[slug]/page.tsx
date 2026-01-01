@@ -5,13 +5,14 @@ import ShopHeaderSection from "@/app/components/sections/shared/ShopHeaderSectio
 import { products } from "@/app/data/products";
 
 type ProductPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = products.find((item) => item.slug === params.slug);
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
