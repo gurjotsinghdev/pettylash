@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Placeholder from "@/app/components/Placeholder";
 
 export default function HomeHeroSection() {
@@ -21,12 +22,18 @@ export default function HomeHeroSection() {
           Lash artistry &amp; pro training for modern beauty careers
         </p>
         <div className="mt-6 flex w-full flex-wrap justify-center gap-4 sm:mt-8">
-          <button className="w-full rounded-none bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-xs">
+          <Link
+            href="/services"
+            className="w-full rounded-none bg-white px-6 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-xs"
+          >
             Appointments
-          </button>
-          <button className="w-full rounded-none border border-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)] sm:w-auto sm:px-8 sm:text-xs">
+          </Link>
+          <Link
+            href="/training"
+            className="w-full rounded-none border border-white px-6 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)] sm:w-auto sm:px-8 sm:text-xs"
+          >
             Trainings
-          </button>
+          </Link>
         </div>
       </div>
     </div>

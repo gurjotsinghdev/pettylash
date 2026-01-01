@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { tanningPackages } from "@/app/data/services";
 
 export default function TanningPackagesSection() {
@@ -17,11 +18,11 @@ export default function TanningPackagesSection() {
         </p>
       </div>
       <div className="mt-10 grid gap-6 lg:grid-cols-3">
-        {tanningPackages.map((pkg) => (
-          <div
-            key={pkg.name}
-            className="rounded-2xl border border-[color:var(--pl-sand)] bg-white/80 p-6 shadow-[0_18px_35px_rgba(76,42,34,0.12)]"
-          >
+          {tanningPackages.map((pkg) => (
+            <div
+              key={pkg.name}
+              className="rounded-2xl border border-[color:var(--pl-sand)] bg-white/80 p-6 shadow-[0_18px_35px_rgba(76,42,34,0.12)]"
+            >
             <div className="flex flex-wrap items-baseline justify-between gap-4">
               <h3 className="text-xl">{pkg.name}</h3>
               {pkg.price ? (
@@ -37,6 +38,12 @@ export default function TanningPackagesSection() {
                 ))}
               </ul>
             ) : null}
+            <Link
+              href="/contact"
+              className="mt-5 inline-flex w-full items-center justify-center rounded-full border border-[color:var(--pl-charcoal)] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
+            >
+              Book Now
+            </Link>
           </div>
         ))}
       </div>

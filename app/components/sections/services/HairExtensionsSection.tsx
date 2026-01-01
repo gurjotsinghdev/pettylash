@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { hairExtensions } from "@/app/data/services";
 
 export default function HairExtensionsSection() {
@@ -24,9 +25,17 @@ export default function HairExtensionsSection() {
                 Bundle add-on: {item.bundleAddOn}
               </p>
             </div>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
-              {item.price}
-            </span>
+            <div className="flex flex-col items-end gap-2">
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
+                {item.price}
+              </span>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-[color:var(--pl-charcoal)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
+              >
+                Book Now
+              </Link>
+            </div>
           </div>
         ))}
       </div>

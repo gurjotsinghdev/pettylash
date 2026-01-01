@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { serviceAddOns, serviceNotes } from "@/app/data/services";
 
 export default function AddOnsSection() {
@@ -14,9 +15,19 @@ export default function AddOnsSection() {
               key={addon.name}
               className="flex items-center justify-between rounded-2xl border border-[color:var(--pl-sand)] bg-white/80 px-5 py-4"
             >
-              <span className="text-sm text-[color:var(--pl-ink)]/70">
-                {addon.name}
-              </span>
+              <div>
+                <span className="text-sm text-[color:var(--pl-ink)]/70">
+                  {addon.name}
+                </span>
+                <div className="mt-2">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-full border border-[color:var(--pl-charcoal)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
+                  >
+                    Book Now
+                  </Link>
+                </div>
+              </div>
               <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
                 {addon.price}
               </span>

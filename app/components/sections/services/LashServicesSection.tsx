@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { lashServices } from "@/app/data/services";
 
 type ServiceGroupProps = {
@@ -17,6 +18,12 @@ function ServiceGroup({ title, items }: ServiceGroupProps) {
           </div>
         ))}
       </div>
+      <Link
+        href="/contact"
+        className="mt-5 inline-flex w-full items-center justify-center rounded-full border border-[color:var(--pl-charcoal)] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
+      >
+        Book Now
+      </Link>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { mobileTanningService } from "@/app/data/services";
 
 export default function MobileTanningSection() {
@@ -20,6 +21,12 @@ export default function MobileTanningSection() {
             <p key={detail}>{detail}</p>
           ))}
         </div>
+        <Link
+          href="/contact"
+          className="mt-8 inline-flex rounded-full border border-white/60 px-5 py-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-white transition hover:border-white hover:text-white"
+        >
+          Book Now
+        </Link>
       </div>
     </section>
   );

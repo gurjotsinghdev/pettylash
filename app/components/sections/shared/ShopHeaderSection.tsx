@@ -9,8 +9,8 @@ const shopNavLinks: NavLink[] = [
   { label: "Home", href: "/#home" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
-  { label: "Training", href: "/#founder" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Training", href: "/training" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function ShopHeaderSection({

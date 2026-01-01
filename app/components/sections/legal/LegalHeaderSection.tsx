@@ -1,6 +1,6 @@
 import SiteHeader, { NavLink } from "@/app/components/sections/shared/SiteHeader";
 
-const trainingNavLinks: NavLink[] = [
+const legalNavLinks: NavLink[] = [
   { label: "Home", href: "/#home" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
@@ -8,12 +8,11 @@ const trainingNavLinks: NavLink[] = [
   { label: "Contact Us", href: "/contact" },
 ];
 
-export default function TrainingHeaderSection() {
+export default function LegalHeaderSection() {
   return (
     <SiteHeader
-      announcement="A new chapter starts here - January enrollment special: $1,000 off"
-      navLinks={trainingNavLinks}
-      activeHref="/training"
+      announcement="Policies and terms for Petty Lash"
+      navLinks={legalNavLinks}
     />
   );
 }

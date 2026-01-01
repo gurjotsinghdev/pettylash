@@ -21,7 +21,7 @@ export default function TrainingHeroSection() {
         </p>
         <div className="mt-6 flex w-full flex-wrap justify-center gap-4 sm:mt-8">
           <Link
-            href="#contact"
+            href="/contact"
             className="w-full rounded-none bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-xs"
           >
             Contact Us Now
