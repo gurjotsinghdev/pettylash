@@ -1,0 +1,31 @@
+import Placeholder from "@/app/components/Placeholder";
+
+export default function ProductsHeroSection() {
+  return (
+    <section className="relative overflow-hidden bg-[color:var(--pl-blush)]">
+      <div className="absolute inset-0">
+        <Placeholder label="Product Hero" className="h-full w-full rounded-none text-sm" />
+      </div>
+      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.75),rgba(43,29,23,0.3),rgba(43,29,23,0.1))]" />
+      <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-4xl flex-col items-center justify-center px-6 py-12 text-center text-white">
+        <p className="text-[11px] uppercase tracking-[0.3em] text-white/80 sm:text-xs sm:tracking-[0.45em]">
+          Professional-grade essentials for studio and retail
+        </p>
+        <h1 className="mt-5 text-3xl leading-tight sm:text-5xl">
+          Petty Lash Product Edit
+        </h1>
+        <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-white/80 sm:text-[11px] sm:tracking-[0.35em]">
+          Curated tools, aftercare, and education-ready kits
+        </p>
+        <div className="mt-6 flex w-full flex-wrap justify-center gap-4 sm:mt-8">
+          <button className="w-full rounded-none bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-xs">
+            Shop Best Sellers
+          </button>
+          <button className="w-full rounded-none border border-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-[color:var(--pl-charcoal)] sm:w-auto sm:px-8 sm:text-xs">
+            Download Catalog
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
