@@ -11,12 +11,12 @@ export default function TrainingHeroSection() {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.35),rgba(43,29,23,0.08))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(30,23,20,0.88),rgba(30,23,20,0.6),rgba(30,23,20,0.4))]" />
       <div className="relative z-10 mx-auto flex min-h-[55vh] max-w-4xl flex-col items-center justify-center px-6 py-12 text-center text-white">
         <p className="text-[11px] uppercase tracking-[0.3em] text-white/80 sm:text-xs sm:tracking-[0.45em]">
           Petty Lash Pro Training
         </p>
-        <h1 className="mt-5 text-3xl leading-tight sm:text-5xl">
+        <h1 className="mt-5 text-3xl leading-tight text-white sm:text-5xl">
           {trainingIntro.headline}
         </h1>
         <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-white/80 sm:text-[11px] sm:tracking-[0.35em]">

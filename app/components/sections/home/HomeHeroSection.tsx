@@ -10,13 +10,13 @@ export default function HomeHeroSection() {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.8),rgba(43,29,23,0.25),rgba(43,29,23,0.05))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(30,23,20,0.88),rgba(30,23,20,0.6),rgba(30,23,20,0.4))]" />
       <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-4xl flex-col items-center justify-center px-5 py-10 text-center text-white sm:px-6 sm:py-12 lg:min-h-[70vh]">
         <p className="text-[11px] uppercase tracking-[0.3em] text-white sm:text-xs sm:tracking-[0.45em]">
-          Beauty that saves you time. Skills that change your life.
+          Come pretty leave petty.
         </p>
-        <h2 className="mt-5 text-3xl leading-tight sm:text-5xl lg:text-6xl">
-          Petty Lash Studio + Institute
+        <h2 className="mt-5 text-3xl leading-tight text-white sm:text-5xl lg:text-6xl">
+          Luxury Beauty Lounge + Education
         </h2>
         <p className="mt-4 text-[9px] uppercase tracking-[0.25em] text-white sm:text-[10px] sm:tracking-[0.35em]">
           Lash artistry &amp; pro training for modern beauty careers

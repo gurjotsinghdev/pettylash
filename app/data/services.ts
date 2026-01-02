@@ -100,6 +100,30 @@ export const lashServices = {
   },
 };
 
+export const teethWhiteningService = {
+  name: "Petty Glo Teeth Whitening",
+  price: "$150",
+  summary:
+    "Petty Glo Teeth Whitening is for when you want results fast and without the pain.",
+  details: [
+    "In just 20 minutes, your smile can lighten up to five shades with zero sensitivity - no burning, no zaps, no regret.",
+    "Our all-natural, vegan, cruelty-free formula whitens effectively without stripping enamel, so your teeth stay healthy while your smile stays loud.",
+    "Quick, safe, and undeniably glowing - because subtle was never the goal.",
+  ],
+};
+
+export const permanentBrowsService = {
+  name: "Petty Brows",
+  price: "Limited time $250 (reg $600)",
+  summary:
+    "Petty Brows offers custom Microblading, Nano Brows, Microshading, and Ombre Powder Brows - because your brows should never be basic.",
+  details: [
+    "Each technique is tailored to your face, skin type, and vibe, whether you want soft and natural, bold and defined, or perfectly powdered.",
+    "From hair-like strokes to seamless shading, we create long-lasting, low-maintenance brows that stay flawless 24/7.",
+    "Smudge-proof, sweat-proof, and effortlessly elevated - because waking up with perfect brows is the real flex.",
+  ],
+};
+
 export const serviceAddOns: ServiceItem[] = [
   { name: "Foreign Fill", price: "$15" },
   { name: "After Hours (before 9am, after 5:30pm)", price: "$40" },

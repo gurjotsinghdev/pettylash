@@ -15,7 +15,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "Petty Lash",
   description:
-    "Petty Lash - lash studio, academy, and professional beauty services.",
+    "Petty Lash - luxury beauty lounge + education and professional beauty services.",
 };
 
 export default function RootLayout({

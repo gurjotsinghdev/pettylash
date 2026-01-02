@@ -71,15 +71,6 @@ export const trainingCourse = {
   ],
 };
 
-export const founderProfile = {
-  name: "Tia",
-  role: "Lead Educator",
-  bio:
-    "With years of studio experience and a passion for teaching, Tia built Petty Lash Pro to help artists launch confident careers and beautiful client experiences.",
-  promise:
-    "You will leave with the skills, systems, and support to open your own lash business and grow your client base with confidence.",
-};
-
 export const trainingContact = {
   headline: "Contact Us Now",
   subhead:

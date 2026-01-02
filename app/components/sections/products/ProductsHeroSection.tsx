@@ -6,12 +6,12 @@ export default function ProductsHeroSection() {
       <div className="absolute inset-0">
         <Placeholder label="Product Hero" className="h-full w-full rounded-none text-sm" />
       </div>
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(43,29,23,0.75),rgba(43,29,23,0.3),rgba(43,29,23,0.1))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(30,23,20,0.85),rgba(30,23,20,0.55),rgba(30,23,20,0.35))]" />
       <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-4xl flex-col items-center justify-center px-6 py-12 text-center text-white">
         <p className="text-[11px] uppercase tracking-[0.3em] text-white/80 sm:text-xs sm:tracking-[0.45em]">
           Professional-grade essentials for studio and retail
         </p>
-        <h1 className="mt-5 text-3xl leading-tight sm:text-5xl">
+        <h1 className="mt-5 text-3xl leading-tight text-white sm:text-5xl">
           Petty Lash Product Edit
         </h1>
         <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-white/80 sm:text-[11px] sm:tracking-[0.35em]">

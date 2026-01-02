@@ -55,7 +55,7 @@ export default function SiteHeader({
               />
             </Link>
             <p className="mt-2 text-[9px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/50 sm:text-[10px] sm:tracking-[0.4em]">
-              Studio + Academy
+              Luxury Beauty Lounge + Education
             </p>
           </div>
           <div className="hidden items-center justify-end gap-3 lg:flex">

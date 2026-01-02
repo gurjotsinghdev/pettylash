@@ -3,11 +3,13 @@ import HairExtensionsSection from "@/app/components/sections/services/HairExtens
 import HairMaintenanceSection from "@/app/components/sections/services/HairMaintenanceSection";
 import LashServicesSection from "@/app/components/sections/services/LashServicesSection";
 import MobileTanningSection from "@/app/components/sections/services/MobileTanningSection";
+import PermanentBrowsSection from "@/app/components/sections/services/PermanentBrowsSection";
 import ServicesCtaSection from "@/app/components/sections/services/ServicesCtaSection";
 import ServicesHeaderSection from "@/app/components/sections/services/ServicesHeaderSection";
 import ServicesHeroSection from "@/app/components/sections/services/ServicesHeroSection";
 import TanningPackagesSection from "@/app/components/sections/services/TanningPackagesSection";
 import TanningServicesSection from "@/app/components/sections/services/TanningServicesSection";
+import TeethWhiteningSection from "@/app/components/sections/services/TeethWhiteningSection";
 import HomeFooterSection from "@/app/components/sections/home/HomeFooterSection";
 
 export default function ServicesPage() {
@@ -21,6 +23,8 @@ export default function ServicesPage() {
       <HairExtensionsSection />
       <HairMaintenanceSection />
       <LashServicesSection />
+      <TeethWhiteningSection />
+      <PermanentBrowsSection />
       <AddOnsSection />
       <ServicesCtaSection />
       <HomeFooterSection />
