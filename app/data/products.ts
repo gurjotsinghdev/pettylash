@@ -101,7 +101,7 @@ export const products: Product[] = [
   },
   {
     slug: "tweezers-40-per-tweezer",
-    name: "Tweezers - 40 per tweezer",
+    name: "Tweezers",
     category: "Tools",
     price: "$28",
     summary: "Precision 40-degree tweezers for clean isolation and pickup.",

@@ -4,7 +4,7 @@ import { products } from "@/app/data/products";
 
 export default function ProductsPreviewSection() {
   const featuredSlugs = [
-    "lash-adhesive-10-ml",
+    "lash-cooling-gel-pads",
     "lash-shampoo",
     "tweezers-40-per-tweezer",
   ];
