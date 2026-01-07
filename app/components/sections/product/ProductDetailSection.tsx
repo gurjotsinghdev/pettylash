@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import Placeholder from "@/app/components/Placeholder";
 import type { Product } from "@/app/data/products";
 import { brandDetails } from "@/app/data/products";
 
@@ -20,10 +20,16 @@ export default function ProductDetailSection({
   return (
     <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
       <div className="space-y-6">
-        <Placeholder
-          label={`${product.name} Image`}
-          className="aspect-[4/5] w-full"
-        />
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[24px] border border-white/60 shadow-[0_25px_60px_rgba(91,52,41,0.2)]">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover"
+            sizes="(min-width: 1024px) 45vw, 90vw"
+            priority
+          />
+        </div>
         <div className="rounded-2xl border border-[color:var(--pl-sand)] bg-white/80 p-6">
           <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--pl-rose)]">
             Brand

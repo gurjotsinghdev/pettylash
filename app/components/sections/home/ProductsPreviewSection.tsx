@@ -1,18 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
-import Placeholder from "@/app/components/Placeholder";
-
-const galleryItems = [
-  "Studio close-up",
-  "Lash detail",
-  "Training day",
-  "Before + after",
-  "Soft glam",
-  "Product flatlay",
-  "Client selfie",
-  "Behind the scenes",
-];
+import { products } from "@/app/data/products";
 
 export default function ProductsPreviewSection() {
+  const featuredSlugs = [
+    "lash-adhesive-10-ml",
+    "lash-shampoo",
+    "tweezers-40-per-tweezer",
+  ];
+  const featuredProducts = featuredSlugs
+    .map((slug) => products.find((product) => product.slug === slug))
+    .filter((product): product is (typeof products)[number] => Boolean(product));
+
   return (
     <section
       id="products"
@@ -32,12 +31,35 @@ export default function ProductsPreviewSection() {
             href="/products"
             className="w-full rounded-full border border-[color:var(--pl-rose)] px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)] sm:w-auto"
           >
-            Shop Now
+            View all products
           </Link>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {galleryItems.map((item) => (
-            <Placeholder key={item} label={item} className="aspect-[4/5]" />
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredProducts.map((product) => (
+            <Link
+              key={product.slug}
+              href={`/products/${product.slug}`}
+              className="group rounded-2xl border border-[color:var(--pl-sand)] bg-white/80 p-5 shadow-[0_18px_35px_rgba(76,42,34,0.12)] transition hover:-translate-y-1"
+            >
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[24px] border border-white/60 shadow-[0_25px_60px_rgba(91,52,41,0.2)]">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                  sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                />
+              </div>
+              <div className="mt-5 flex items-baseline justify-between gap-4">
+                <h3 className="text-xl">{product.name}</h3>
+                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
+                  {product.price}
+                </span>
+              </div>
+              <p className="mt-2 text-sm text-[color:var(--pl-ink)]/70">
+                {product.summary}
+              </p>
+            </Link>
           ))}
         </div>
       </div>
