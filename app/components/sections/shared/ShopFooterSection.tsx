@@ -46,15 +46,27 @@ export default function ShopFooterSection() {
             Product Updates
           </h3>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-            Join the list for restocks, drops, and pro pricing.
+            Follow @pettylashhh for restocks, drops, and pro pricing.
           </p>
-          <button className="mt-4 rounded-full border border-[color:var(--pl-rose)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
-            Join the list
-          </button>
         </div>
       </div>
       <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-t border-[color:var(--pl-sand)] pt-6 text-xs uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/60">
         <p>(c) 2025 Petty Lash</p>
+        <p>
+          <Link
+            href="https://bragdeal.com/kelowna-web-design/"
+            className="transition hover:text-[color:var(--pl-rose)]"
+          >
+            Kelowna Web Design
+          </Link>{" "}
+          by{" "}
+          <Link
+            href="https://bragdeal.com"
+            className="transition hover:text-[color:var(--pl-rose)]"
+          >
+            BragDeal Inc.
+          </Link>
+        </p>
         <div className="flex flex-wrap gap-4">
           <Link href="/privacy-policy" className="transition hover:text-[color:var(--pl-rose)]">
             Privacy Policy
