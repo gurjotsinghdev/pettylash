@@ -8,7 +8,9 @@ export default function TanningServicesSection() {
         <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
           Custom Sunless Tans
         </p>
-        <h2 className="mt-4 text-3xl sm:text-4xl">Glow-ready in one visit.</h2>
+        <h2 className="mt-4 text-3xl sm:text-4xl">
+          Glow that looks like you.
+        </h2>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {tanningServices.map((service) => (
             <div

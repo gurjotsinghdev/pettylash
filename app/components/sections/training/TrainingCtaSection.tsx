@@ -8,17 +8,17 @@ export default function TrainingCtaSection() {
           Petty Lash Pro
         </p>
         <h2 className="mt-4 text-3xl text-white sm:text-4xl">
-          Ready to become a certified lash artist?
+          Ready to get certified?
         </h2>
         <p className="mt-4 text-sm text-white/70">
-          Apply now to reserve your training dates and receive the full program
+          Apply to reserve training dates and receive the full program
           breakdown.
         </p>
         <Link
           href="/contact"
           className="mt-8 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5"
         >
-          Contact Us Now
+          Apply now
         </Link>
       </div>
     </section>

@@ -12,9 +12,9 @@ export default function TrainingIntroSection() {
         </div>
         <div>
           <p className="text-base leading-7 text-[color:var(--pl-ink)]/75">
-            As lash specialists, we focus on skill, safety, and a client-first
-            experience. Our training gives you the confidence to create a lash
-            business that reflects your talent and professionalism.
+            We focus on skill, safety, and a client-first experience. Our
+            training builds confident technique and the structure you need to
+            run a real lash business.
           </p>
           <p className="mt-4 text-base leading-7 text-[color:var(--pl-ink)]/75">
             {trainingIntro.tagline}

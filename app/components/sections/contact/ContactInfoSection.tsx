@@ -29,7 +29,6 @@ export default function ContactInfoSection() {
             Connect
           </p>
           <div className="mt-4 space-y-2 text-sm text-[color:var(--pl-ink)]/70">
-            <p>Phone: {contactDetails.phone}</p>
             <p>Email: {contactDetails.email}</p>
             <p>Instagram: {contactDetails.instagram}</p>
           </div>

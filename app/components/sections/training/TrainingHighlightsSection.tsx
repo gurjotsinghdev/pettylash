@@ -10,12 +10,12 @@ export default function TrainingHighlightsSection() {
               Why Petty Lash Pro
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl">
-              Build skills and confidence that last.
+              Build skills that stay sharp.
             </h2>
           </div>
           <p className="max-w-sm text-sm text-[color:var(--pl-ink)]/70">
-            Our training blends technique, artistry, and business strategy to
-            help you grow faster.
+            Training blends technique, artistry, and business structure so you
+            grow faster.
           </p>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

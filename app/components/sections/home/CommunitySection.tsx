@@ -7,10 +7,12 @@ export default function CommunitySection() {
           alt="Petty Lash studio moment"
           className="aspect-[16/7] w-full rounded-[24px] object-cover"
         />
-        <h2 className="mt-10 text-3xl sm:text-4xl">Join Our Beauty Community</h2>
+        <h2 className="mt-10 text-3xl sm:text-4xl">
+          Step into the Petty community.
+        </h2>
         <p className="mt-4 text-base text-[color:var(--pl-ink)]/70">
-          Build a future that feels aligned and powerful with education,
-          mentorship, and support.
+          Education, mentorship, and real support for artists and clients who
+          want more.
         </p>
       </div>
     </section>

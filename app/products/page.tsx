@@ -1,5 +1,6 @@
 import ProductsGridSection from "@/app/components/sections/products/ProductsGridSection";
 import ProductsHeroSection from "@/app/components/sections/products/ProductsHeroSection";
+import ProductsCollectiveSection from "@/app/components/sections/products/ProductsCollectiveSection";
 import ProductsKitsSection from "@/app/components/sections/products/ProductsKitsSection";
 import ProductsWholesaleSection from "@/app/components/sections/products/ProductsWholesaleSection";
 import ShopFooterSection from "@/app/components/sections/shared/ShopFooterSection";
@@ -11,6 +12,7 @@ export default function ProductsPage() {
       <ShopHeaderSection activeHref="/products" />
       <ProductsHeroSection />
       <ProductsGridSection />
+      <ProductsCollectiveSection />
       <ProductsKitsSection />
       <ProductsWholesaleSection />
       <ShopFooterSection />

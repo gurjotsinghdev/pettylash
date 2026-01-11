@@ -5,10 +5,10 @@ export default function HairExtensionsSection() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
       <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
-        Hair Extensions - Nanobeads
+        Nanobead Hair Extensions
       </p>
       <h2 className="mt-3 text-3xl sm:text-4xl">
-        Seamless length and volume, customized to you.
+        Seamless length and volume that blends in.
       </h2>
       <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
         {hairExtensions.intro}

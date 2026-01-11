@@ -27,6 +27,7 @@ export default function ProductDetailSection({
             fill
             className="object-cover"
             sizes="(min-width: 1024px) 45vw, 90vw"
+            quality={100}
             priority
           />
         </div>
@@ -69,6 +70,37 @@ export default function ProductDetailSection({
                 </p>
               </div>
             ))}
+          </div>
+        ) : null}
+        {product.options && product.options.length > 0 ? (
+          <div className="mt-6 space-y-4">
+            {product.options.map((option) => (
+              <label
+                key={option.label}
+                className="block rounded-2xl border border-[color:var(--pl-sand)] bg-white/80 p-5"
+              >
+                <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
+                  {option.label}
+                </span>
+                <select
+                  className="mt-3 w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-2 text-sm text-[color:var(--pl-ink)]"
+                  aria-required={option.required || undefined}
+                  defaultValue=""
+                >
+                  <option value="" disabled>
+                    Select {option.label.toLowerCase()}
+                  </option>
+                  {option.values.map((value) => (
+                    <option key={value} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ))}
+            <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/55">
+              Selection required before adding to cart.
+            </p>
           </div>
         ) : null}
         {product.notes && product.notes.length > 0 ? (

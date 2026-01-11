@@ -17,15 +17,15 @@ export default function ServicesPage() {
     <div className="bg-[color:var(--pl-cream)] text-[color:var(--pl-ink)]">
       <ServicesHeaderSection />
       <ServicesHeroSection />
+      <LashServicesSection />
+      <AddOnsSection />
       <TanningServicesSection />
       <TanningPackagesSection />
       <MobileTanningSection />
       <HairExtensionsSection />
       <HairMaintenanceSection />
-      <LashServicesSection />
       <TeethWhiteningSection />
       <PermanentBrowsSection />
-      <AddOnsSection />
       <ServicesCtaSection />
       <HomeFooterSection />
     </div>

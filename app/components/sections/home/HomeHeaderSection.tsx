@@ -4,14 +4,14 @@ const homeNavLinks: NavLink[] = [
   { label: "Home", href: "/#home" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
-  { label: "Training", href: "/training" },
+  { label: "Education", href: "/training" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 export default function HomeHeaderSection() {
   return (
     <SiteHeader
-      announcement="A new chapter starts here - January enrollment special: $1,000 off"
+      announcement="Get rich off lashes. Claim 2026 as your year."
       navLinks={homeNavLinks}
     />
   );

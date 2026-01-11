@@ -8,7 +8,7 @@ export default function HairMaintenanceSection() {
         <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
           Routine Maintenance - Hair Extensions
         </p>
-        <h2 className="mt-3 text-3xl sm:text-4xl">Keep your install fresh.</h2>
+        <h2 className="mt-3 text-3xl sm:text-4xl">Keep your install flawless.</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
         {hairMaintenance.items.map((item) => (
           <div

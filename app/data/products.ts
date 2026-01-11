@@ -3,6 +3,12 @@ export type ProductDetail = {
   value: string | string[];
 };
 
+export type ProductOption = {
+  label: string;
+  values: string[];
+  required?: boolean;
+};
+
 export type Product = {
   slug: string;
   name: string;
@@ -11,43 +17,90 @@ export type Product = {
   summary: string;
   image: string;
   details?: ProductDetail[];
+  options?: ProductOption[];
   notes?: string[];
 };
 
+const lashTrayLengths = Array.from({ length: 18 }, (_, index) => {
+  const length = index + 8;
+  return `${length} mm`;
+});
+
 export const products: Product[] = [
   {
-    slug: "lash-adhesive-10-ml",
-    name: "Lash Adhesive - 10 ml",
-    category: "Adhesive",
-    price: "$50",
-    summary: "Fast-dry adhesive for secure, long-lasting retention.",
-    image: "/products/lash-glue.jpg",
+    slug: "luxury-lash-trays",
+    name: "Luxury Lash Trays",
+    category: "Lash Trays",
+    price: "$24",
+    summary: "Luxury lash extensions with 16 rows for custom styling.",
+    image: "/images/service-lash.jpeg",
     details: [
       {
-        label: "Size",
-        value: "10 ml",
+        label: "Rows",
+        value: "16 rows",
       },
       {
-        label: "Drying time options",
-        value: ["1-2 seconds", "0.5 seconds"],
+        label: "Diameter options",
+        value: ["0.03", "0.05", "0.07", "0.15", "0.20"],
       },
+      {
+        label: "Length range",
+        value: "8-25 mm",
+      },
+      {
+        label: "Curl options",
+        value: ["C", "CC", "D", "DD", "J", "L"],
+      },
+    ],
+    options: [
+      {
+        label: "Diameter",
+        values: ["0.03", "0.05", "0.07", "0.15", "0.20"],
+        required: true,
+      },
+      {
+        label: "Length",
+        values: lashTrayLengths,
+        required: true,
+      },
+      {
+        label: "Curl",
+        values: ["C", "CC", "D", "DD", "J", "L"],
+        required: true,
+      },
+    ],
+    notes: [
+      "Luxury lash extensions designed for professional sets.",
+      "Choose a diameter, length, and curl before checkout.",
     ],
   },
   {
-    slug: "lash-adhesive-5-ml",
-    name: "Lash Adhesive - 5 ml",
+    slug: "lash-adhesive",
+    name: "Lash Adhesive",
     category: "Adhesive",
-    price: "$35",
-    summary: "Smaller adhesive size for easy kit rotation.",
+    price: "$35-$50",
+    summary: "Fast-dry adhesive with size and drying time options.",
     image: "/products/lash-glue.jpg",
     details: [
       {
-        label: "Size",
-        value: "5 ml",
+        label: "Sizes",
+        value: ["5 ml", "10 ml"],
       },
       {
         label: "Drying time options",
-        value: ["1-2 seconds", "0.5 seconds"],
+        value: ["0.5 seconds", "1-2 seconds", "2-3 seconds"],
+      },
+    ],
+    options: [
+      {
+        label: "Size",
+        values: ["5 ml", "10 ml"],
+        required: true,
+      },
+      {
+        label: "Drying time",
+        values: ["0.5 seconds", "1-2 seconds", "2-3 seconds"],
+        required: true,
       },
     ],
   },

@@ -10,11 +10,11 @@ export default function TrainingCurriculumSection() {
               What You'll Learn
             </p>
             <h2 className="mt-3 text-3xl text-white sm:text-4xl">
-              Core lash artistry + business essentials.
+              Lash mastery plus business essentials.
             </h2>
           </div>
           <p className="max-w-sm text-sm text-white/70">
-            Comprehensive curriculum designed for confidence behind the lash bed.
+            A complete curriculum built for confidence behind the lash bed.
           </p>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

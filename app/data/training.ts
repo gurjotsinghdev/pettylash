@@ -1,78 +1,78 @@
 export const trainingIntro = {
-  headline: "Become a Certified Lash Artist with Petty Lash Pro",
+  headline: "Petty Lash Pro Certification",
   subhead:
-    "Petty Lash Pro is a lash-focused certification built to help you master technique, build confidence, and launch a career in beauty.",
-  tagline: "We do not just teach lash services - we build lashpreneurs.",
+    "A lash-focused certification that sharpens technique, confidence, and client flow.",
+  tagline: "We teach craft, systems, and a mindset that books.",
 };
 
 export const trainingHighlights = [
   {
-    title: "Beginner friendly",
+    title: "Start-to-finish support",
     description:
-      "Step-by-step guidance with live demonstrations and clear practice goals.",
+      "Guided demos, step-by-step practice, and feedback that actually clicks.",
   },
   {
-    title: "Flexible learning",
+    title: "Flexible structure",
     description:
-      "Online modules paired with in-person coaching to fit your schedule.",
+      "Online lessons paired with in-person coaching that fits real schedules.",
   },
   {
-    title: "Business ready",
+    title: "Client-ready business",
     description:
-      "Client experience, pricing, and branding lessons built into the program.",
+      "Pricing, policies, and brand presence built into the curriculum.",
   },
   {
-    title: "Hands-on models",
+    title: "Live model practice",
     description:
-      "Real model practice with instructor feedback for confident artistry.",
+      "Hands-on sets with instructor corrections for confident artistry.",
   },
   {
-    title: "Mentorship support",
+    title: "Post-grad mentorship",
     description:
-      "Ongoing mentorship after graduation to help you keep growing.",
+      "Check-ins after graduation to help you keep improving and booking.",
   },
 ];
 
 export const trainingCurriculum = [
-  "Lash mapping and eye styling",
-  "Classic lash extensions",
-  "Hybrid and volume techniques",
-  "Isolation and placement control",
-  "Adhesive knowledge and retention",
-  "Safety, sanitation, and workspace setup",
-  "Client consultation and contraindications",
-  "Healing, aftercare, and retention plans",
-  "Content creation and brand building",
-  "Marketing and clientele growth",
+  "Eye mapping and styling",
+  "Classic extension sets",
+  "Hybrid + volume techniques",
+  "Isolation, placement, and retention",
+  "Adhesive selection and retention care",
+  "Sanitation, safety, and station setup",
+  "Client consults + contraindications",
+  "Aftercare, retention plans, and refill timing",
+  "Content creation + brand presence",
+  "Marketing and client growth",
 ];
 
 export const trainingFormat = [
   {
     title: "Part 1 - Online learning",
     description:
-      "Self-paced lessons with video demonstrations, manuals, and checklists so you can prep before your in-person training.",
+      "Self-paced lessons with video demos, manuals, and checklists so you are prepared before in-person training.",
   },
   {
     title: "Part 2 - In-person training",
     description:
-      "Hands-on instruction with live models, real-time corrections, and skill verification before graduation.",
+      "Hands-on days with live models, real-time corrections, and skill checks before graduation.",
   },
 ];
 
 export const trainingCourse = {
   name: "Petty Lash Pro Masterclass",
   summary:
-    "An intensive, multi-day certification focused on lash artistry, client care, and business strategy.",
+    "An intensive, multi-day certification focused on artistry, client care, and business structure.",
   includes: [
-    "Live model practice and instructor feedback",
-    "Client-ready workflow and consultation scripts",
-    "Guided kit selection and supply recommendations",
-    "Post-graduation mentorship check-ins",
+    "Live model set with instructor corrections",
+    "Client-ready workflow and consult scripts",
+    "Kit curation and supply guidance",
+    "Post-grad mentorship check-ins",
   ],
 };
 
 export const trainingContact = {
-  headline: "Contact Us Now",
+  headline: "Start your Petty Pro journey.",
   subhead:
-    "Send a message to start your Petty Lash Pro journey and receive the full course schedule.",
+    "Send your details to receive the current schedule and enrollment steps.",
 };

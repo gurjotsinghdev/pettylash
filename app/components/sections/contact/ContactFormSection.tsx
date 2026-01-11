@@ -6,10 +6,10 @@ export default function ContactFormSection() {
           <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
             Send a message
           </p>
-          <h2 className="mt-4 text-3xl sm:text-4xl">Tell us what you need.</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">Start the conversation.</h2>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-            Share the service you are interested in, your preferred dates, and
-            any special requests.
+            Share the service you want, your preferred dates, and any special
+            requests so we can confirm your time.
           </p>
         </div>
         <form className="grid gap-4">
@@ -20,10 +20,6 @@ export default function ContactFormSection() {
           <input
             className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
             placeholder="Email"
-          />
-          <input
-            className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
-            placeholder="Phone"
           />
           <input
             className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"

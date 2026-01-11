@@ -9,13 +9,13 @@ const shopNavLinks: NavLink[] = [
   { label: "Home", href: "/#home" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
-  { label: "Training", href: "/training" },
+  { label: "Education", href: "/training" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 export default function ShopHeaderSection({
   activeHref,
-  announcement = "New arrivals drop every Friday - complimentary shipping over $120",
+  announcement = "Get rich off lashes. Claim 2026 as your year.",
 }: ShopHeaderSectionProps) {
   return (
     <SiteHeader

@@ -4,8 +4,8 @@ import { products } from "@/app/data/products";
 
 export default function ProductsPreviewSection() {
   const featuredSlugs = [
-    "lash-cooling-gel-pads",
-    "lash-shampoo",
+    "luxury-lash-trays",
+    "lash-adhesive",
     "tweezers-40-per-tweezer",
   ];
   const featuredProducts = featuredSlugs
@@ -24,14 +24,14 @@ export default function ProductsPreviewSection() {
               Products
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl">
-              Petty Lash Professional Products
+              Petty Lash Pro Essentials
             </h2>
           </div>
           <Link
             href="/products"
             className="w-full rounded-full border border-[color:var(--pl-rose)] px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)] sm:w-auto"
           >
-            View all products
+            Shop the collection
           </Link>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -48,6 +48,7 @@ export default function ProductsPreviewSection() {
                   fill
                   className="object-cover transition duration-500 group-hover:scale-105"
                   sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
+                  quality={100}
                 />
               </div>
               <div className="mt-5 flex items-baseline justify-between gap-4">

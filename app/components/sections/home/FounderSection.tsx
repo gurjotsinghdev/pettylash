@@ -11,20 +11,19 @@ export default function FounderSection() {
       />
       <div>
         <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
-          All About Our Founder
+          Meet the founder
         </p>
         <h2 className="mt-4 text-3xl sm:text-4xl">
-          Learn the story behind Petty Lash.
+          Built on artistry, backed by standards.
         </h2>
         <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
-          Our founder blends artistry, wellness, and education to create a
-          studio experience that feels personal and restorative. Each
-          masterclass is built on real studio knowledge and elevated service
-          standards.
+          Petty Lash was built on real studio experience, a love for artistry,
+          and a commitment to elevated service. Every class is rooted in the
+          standards we use behind the lash bed.
         </p>
         <p className="mt-4 text-base leading-7 text-[color:var(--pl-ink)]/75">
-          Students receive clear systems, hands-on training, and ongoing
-          mentorship to help them build sustainable lash businesses.
+          Students get clear systems, hands-on training, and mentorship that
+          supports a long-term, bookable business.
         </p>
       </div>
     </section>

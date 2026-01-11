@@ -6,7 +6,7 @@ export default function MobileTanningSection() {
     <section className="bg-[color:var(--pl-cocoa)] px-6 py-16 text-white sm:py-20">
       <div className="mx-auto max-w-5xl">
         <p className="text-xs uppercase tracking-[0.45em] text-white/60">
-          Additional Tanning Service
+          Mobile Tanning
         </p>
         <div className="mt-4 flex flex-wrap items-baseline justify-between gap-4">
           <h2 className="text-3xl text-white sm:text-4xl">

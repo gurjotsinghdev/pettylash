@@ -14,17 +14,16 @@ export default function AboutSection() {
           About
         </p>
         <h2 className="mt-4 text-3xl sm:text-4xl">
-          A lash lounge with intention.
+          Lash luxury with purpose.
         </h2>
         <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
-          Petty Lash delivers luxury lash services and boutique training in a
-          serene studio setting. We focus on healthy, long-lasting results and
-          a client-first experience from consultation to aftercare.
+          Petty Lash pairs luxury lash artistry with boutique education in a
+          calm Kelowna studio. We focus on retention, comfort, and a client-first
+          flow from consult to aftercare.
         </p>
         <p className="mt-4 text-base leading-7 text-[color:var(--pl-ink)]/75">
-          Our academy offers guided education, practical technique, and
-          business support so artists feel confident behind the lash bed and
-          ready to grow.
+          The academy blends technique, business systems, and mentorship so
+          artists leave ready to book, retain, and grow.
         </p>
       </div>
     </section>

@@ -26,7 +26,8 @@ export default function SiteHeader({
       <div className="mx-auto max-w-6xl px-6 py-6">
         <div className="grid items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
           <div className="hidden items-center gap-3 lg:flex">
-            <button
+            <Link
+              href="/search"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-[color:var(--pl-sand)] text-[color:var(--pl-ink)]/70 transition hover:border-[color:var(--pl-rose)] hover:text-[color:var(--pl-rose)]"
               aria-label="Search"
             >
@@ -44,7 +45,7 @@ export default function SiteHeader({
                   d="m21 21-4.35-4.35m1.1-4.4a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
           <div className="text-center">
             <Link href="/#home">
@@ -55,7 +56,7 @@ export default function SiteHeader({
               />
             </Link>
             <p className="mt-2 text-[9px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/50 sm:text-[10px] sm:tracking-[0.4em]">
-              Luxury Beauty Lounge + Education
+              Luxury Beauty Lounge
             </p>
           </div>
           <div className="hidden items-center justify-end gap-3 lg:flex">

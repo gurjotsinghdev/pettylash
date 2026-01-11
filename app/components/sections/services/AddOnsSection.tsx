@@ -6,9 +6,14 @@ export default function AddOnsSection() {
     <section className="bg-[color:var(--pl-cream)] px-6 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl">
         <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
-          Add-Ons
+          Lash Add-Ons
         </p>
-        <h2 className="mt-3 text-3xl sm:text-4xl">Upgrade your appointment.</h2>
+        <h2 className="mt-3 text-3xl sm:text-4xl">
+          Upgrade your lash service.
+        </h2>
+        <p className="mt-3 text-sm text-[color:var(--pl-ink)]/70">
+          Add-ons are available exclusively with lash services.
+        </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {serviceAddOns.map((addon) => (
             <div

@@ -20,14 +20,14 @@ export default function TrainingHeroSection() {
           {trainingIntro.headline}
         </h1>
         <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-white/80 sm:text-[11px] sm:tracking-[0.35em]">
-          Lash artistry + business mentorship
+          Technique, business, and confidence
         </p>
         <div className="mt-6 flex w-full flex-wrap justify-center gap-4 sm:mt-8">
           <Link
             href="/contact"
             className="w-full rounded-none bg-white px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] transition hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-xs"
           >
-            Contact Us Now
+            Start enrollment
           </Link>
           <Link
             href="/services"

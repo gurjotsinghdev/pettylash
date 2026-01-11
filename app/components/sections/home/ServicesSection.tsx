@@ -3,15 +3,15 @@ import Link from "next/link";
 const serviceItems = [
   {
     title: "Lash Extensions",
-    blurb: "Classic, hybrid, and volume sets customized to your features.",
+    blurb: "Classic, hybrid, and volume sets tailored to your eye shape.",
   },
   {
     title: "Lash Lift + Tint",
-    blurb: "Lifted definition with a soft, natural finish.",
+    blurb: "Lifted definition with a clean, effortless finish.",
   },
   {
     title: "Aftercare + Retail",
-    blurb: "Professional products to keep your lashes healthy.",
+    blurb: "Pro products to keep retention strong between fills.",
   },
 ];
 
@@ -25,10 +25,12 @@ export default function ServicesSection() {
         <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
           Our Services
         </p>
-        <h2 className="mt-4 text-3xl sm:text-4xl">Tailored lash artistry.</h2>
+        <h2 className="mt-4 text-3xl sm:text-4xl">
+          Lash artistry, customized for you.
+        </h2>
         <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
-          Choose from our signature services and treatments designed for
-          effortless, elevated beauty.
+          Choose from signature services designed for clean, elevated results
+          and easy upkeep.
         </p>
         <div className="mt-8 space-y-4">
           {serviceItems.map((service) => (
@@ -47,7 +49,7 @@ export default function ServicesSection() {
           href="/services"
           className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[color:var(--pl-charcoal)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white sm:w-auto"
         >
-          Book a Service
+          Book a service
         </Link>
       </div>
       <img

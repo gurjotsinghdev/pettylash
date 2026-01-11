@@ -10,11 +10,11 @@ export default function TanningPackagesSection() {
             Tanning Packages
           </p>
           <h2 className="mt-3 text-3xl sm:text-4xl">
-            Group-ready glow bundles.
+            Glow bundles made for groups.
           </h2>
         </div>
         <p className="max-w-sm text-sm text-[color:var(--pl-ink)]/70">
-          Save when you book with friends or stock up on future tans.
+          Save when you book together or pre-book your next glow.
         </p>
       </div>
       <div className="mt-10 grid gap-6 lg:grid-cols-3">

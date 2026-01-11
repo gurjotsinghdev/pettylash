@@ -14,8 +14,8 @@ export default function ServicesHeroSection() {
           Instagram: {servicesIntro.instagram}
         </p>
         <p className="mt-6 text-base leading-7 text-[color:var(--pl-ink)]/75">
-          Experience luxe beauty services tailored to your glow, your schedule,
-          and your celebration moments.
+          Luxe beauty services tailored to your glow, your schedule, and the
+          moments you want to show up for.
         </p>
       </div>
       <img

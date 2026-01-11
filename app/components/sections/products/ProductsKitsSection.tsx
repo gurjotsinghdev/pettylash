@@ -1,17 +1,17 @@
 const kitItems = [
   {
     name: "Artist Starter Kit",
-    detail: "Everything you need to begin lash services with confidence.",
+    detail: "All the essentials to launch services with confidence.",
     price: "$249",
   },
   {
     name: "Studio Retail Bundle",
-    detail: "Client-favorite aftercare products for your front desk.",
+    detail: "Client-loved aftercare for your retail shelf.",
     price: "$310",
   },
   {
     name: "Training Day Toolkit",
-    detail: "Practice kit curated for academy students.",
+    detail: "Practice kit curated for academy training days.",
     price: "$180",
   },
 ];
@@ -25,11 +25,11 @@ export default function ProductsKitsSection() {
             Studio Kits
           </p>
           <h2 className="mt-4 text-3xl text-white sm:text-4xl">
-            Build your pro kit in a single delivery.
+            Build your pro kit in one drop.
           </h2>
           <p className="mt-4 text-sm text-white/70">
-            Save time with our curated bundles, assembled by educators and
-            lash artists for consistent results.
+            Save time with curated bundles built by educators and working
+            lash artists.
           </p>
         </div>
         <div className="space-y-4">

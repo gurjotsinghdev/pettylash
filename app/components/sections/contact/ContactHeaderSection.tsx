@@ -4,14 +4,14 @@ const contactNavLinks: NavLink[] = [
   { label: "Home", href: "/#home" },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
-  { label: "Training", href: "/training" },
+  { label: "Education", href: "/training" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 export default function ContactHeaderSection() {
   return (
     <SiteHeader
-      announcement="We reply within 24 hours - share your goals with us"
+      announcement="Get rich off lashes. Claim 2026 as your year."
       navLinks={contactNavLinks}
       activeHref="/contact"
     />

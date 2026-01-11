@@ -8,7 +8,7 @@ export default function TrainingContactSection() {
           <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
             {trainingContact.headline}
           </p>
-          <h2 className="mt-4 text-3xl sm:text-4xl">Start your training.</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">Get your dates.</h2>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
             {trainingContact.subhead}
           </p>
@@ -24,10 +24,6 @@ export default function TrainingContactSection() {
           <input
             className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
             placeholder="Email"
-          />
-          <input
-            className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
-            placeholder="Phone number"
           />
           <textarea
             className="min-h-[120px] w-full rounded-[22px] border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"

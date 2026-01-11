@@ -8,7 +8,7 @@ export default function TrainingFormatSection() {
           Training Format
         </p>
         <h2 className="mt-4 text-3xl text-white sm:text-4xl">
-          Learn online, master in person.
+          Learn online, sharpen in person.
         </h2>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {trainingFormat.map((step) => (

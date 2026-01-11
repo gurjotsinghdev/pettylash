@@ -1,26 +1,48 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/app/data/products";
 
-export default function ProductsGridSection() {
+export default function SearchSection() {
+  const [query, setQuery] = useState("");
+
+  const results = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (!normalizedQuery) {
+      return products;
+    }
+
+    return products.filter((product) => {
+      const haystack = `${product.name} ${product.category} ${product.summary}`.toLowerCase();
+      return haystack.includes(normalizedQuery);
+    });
+  }, [query]);
+
   return (
     <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
-            Signature Products
+            Search
           </p>
-          <h2 className="mt-3 text-3xl sm:text-4xl">
-            Stock your kit with Petty-approved essentials.
-          </h2>
+          <h1 className="mt-3 text-3xl sm:text-4xl">Find your essentials.</h1>
         </div>
-        <p className="max-w-sm text-sm text-[color:var(--pl-ink)]/70">
-          Every item is studio-tested, retail-ready, and built with artist
-          feedback.
+        <p className="text-sm text-[color:var(--pl-ink)]/70">
+          {results.length} results
         </p>
       </div>
+      <div className="mt-6 rounded-[28px] border border-[color:var(--pl-sand)] bg-white/80 p-4">
+        <input
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          className="w-full rounded-full border border-[color:var(--pl-sand)] bg-white px-4 py-3 text-sm"
+          placeholder="Search by product name, category, or keyword"
+        />
+      </div>
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {products.map((product) => (
+        {results.map((product) => (
           <Link
             key={product.slug}
             href={`/products/${product.slug}`}
@@ -37,7 +59,7 @@ export default function ProductsGridSection() {
               />
             </div>
             <div className="mt-5 flex items-baseline justify-between gap-4">
-              <h3 className="text-xl">{product.name}</h3>
+              <h2 className="text-xl">{product.name}</h2>
               <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
                 {product.price}
               </span>
@@ -45,12 +67,6 @@ export default function ProductsGridSection() {
             <p className="mt-2 text-sm text-[color:var(--pl-ink)]/70">
               {product.summary}
             </p>
-            <p className="mt-3 text-[10px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/55">
-              {product.category}
-            </p>
-            <span className="mt-5 inline-flex w-full items-center justify-center rounded-full border border-[color:var(--pl-charcoal)] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-charcoal)] transition group-hover:border-[color:var(--pl-rose)] group-hover:text-[color:var(--pl-rose)]">
-              View product
-            </span>
           </Link>
         ))}
       </div>

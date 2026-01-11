@@ -34,7 +34,9 @@ export default function LashServicesSection() {
       <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--pl-rose)]">
         Lash Services
       </p>
-      <h2 className="mt-3 text-3xl sm:text-4xl">Lash sets tailored to your vibe.</h2>
+      <h2 className="mt-3 text-3xl sm:text-4xl">
+        Lash sets shaped to your features.
+      </h2>
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
         <ServiceGroup
           title={lashServices.megaVolume.name}

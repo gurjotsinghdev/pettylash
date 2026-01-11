@@ -8,14 +8,13 @@ export default function ContactHeroSection() {
           Contact
         </p>
         <h1 className="mt-4 text-3xl sm:text-4xl">
-          Let us plan your next appointment.
+          Tell us what you want to book.
         </h1>
         <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-          Reach out for bookings, training dates, or product questions. Our team
-          will guide you to the right service.
+          Reach out for appointments, training dates, or product questions. We
+          will confirm availability and guide you to the right fit.
         </p>
         <div className="mt-6 space-y-2 text-sm text-[color:var(--pl-ink)]/70">
-          <p>Phone: {contactDetails.phone}</p>
           <p>Email: {contactDetails.email}</p>
           <p>Instagram: {contactDetails.instagram}</p>
         </div>

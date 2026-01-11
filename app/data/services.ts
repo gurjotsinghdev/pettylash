@@ -13,13 +13,14 @@ export const servicesIntro = {
 
 export const tanningServices: ServiceItem[] = [
   {
-    name: "Xpress Tan",
-    note: "Recommended shower time: 2-5 hours after application",
+    name: "Express Tan",
+    price: "$100",
+    note: "Shower time: 2-5 hours after application.",
   },
   {
     name: "Petty Glow Tan",
     price: "$100",
-    note: "Recommended shower time: 12 hours after application",
+    note: "Shower time: about 12 hours after application.",
   },
 ];
 
@@ -27,25 +28,25 @@ export const tanningPackages: ServiceItem[] = [
   {
     name: "Don't Be Petty Package",
     price: "$400 (regular $500)",
-    details: ["Buy 4 tans, get 1 free", "Must be purchased as a package"],
+    details: ["Buy 4 tans, get 1 on us", "Must be purchased as a package"],
   },
   {
     name: "Triple Threat Package",
     price: "$80 per person or $240 total",
     details: [
-      "3 best friends, 3 perfect tans",
+      "Three friends, three flawless tans",
       "Save $20 each when booked together",
-      "Regular $100 per person / $300 total",
+      "Regular $100 each / $300 total",
     ],
   },
   {
     name: "Glow Gang Package",
     price: "$120 per person or $600 total",
     details: [
-      "Custom + mobile tans for 5 friends at a discounted group rate",
-      "Perfect for birthdays, girls' nights, or bachelorette parties",
+      "Custom + mobile tans for 5 friends at a group rate",
+      "Perfect for birthdays, girls' nights, or bachelorette plans",
       "Save $30 each",
-      "Regular $150 per person / $750 total",
+      "Regular $150 each / $750 total",
     ],
   },
 ];
@@ -54,14 +55,14 @@ export const mobileTanningService: ServiceItem = {
   name: "Mobile Custom Tan",
   price: "$150",
   details: [
-    "Mobile custom spray tans available, offering a luxury experience in the comfort of your own home.",
-    "Stay relaxed while your tan develops as we bring the experience to you.",
+    "Mobile custom spray tans brought to your space for a luxe, private experience.",
+    "Stay relaxed while your tan develops as we bring the setup to you.",
   ],
 };
 
 export const hairExtensions = {
   intro:
-    "Pricing includes complimentary consultation, hair, install, and styling.",
+    "Pricing includes consultation, hair, install, and styling.",
   lengths: [
     { length: "18\"", weight: "100g", price: "$620", bundleAddOn: "$120" },
     { length: "20\"", weight: "100g", price: "$670", bundleAddOn: "$130" },
@@ -69,7 +70,7 @@ export const hairExtensions = {
     { length: "24\"", weight: "100g", price: "$770", bundleAddOn: "$150" },
     { length: "26\"", weight: "100g", price: "$800", bundleAddOn: "$160" },
   ],
-  note: "Additional custom lengths available upon request.",
+  note: "Custom lengths available upon request.",
 };
 
 export const hairMaintenance = {
@@ -104,11 +105,11 @@ export const teethWhiteningService = {
   name: "Petty Glo Teeth Whitening",
   price: "$150",
   summary:
-    "Petty Glo Teeth Whitening is for when you want results fast and without the pain.",
+    "Petty Glo Teeth Whitening delivers bright results fast without the sting.",
   details: [
-    "In just 20 minutes, your smile can lighten up to five shades with zero sensitivity - no burning, no zaps, no regret.",
-    "Our all-natural, vegan, cruelty-free formula whitens effectively without stripping enamel, so your teeth stay healthy while your smile stays loud.",
-    "Quick, safe, and undeniably glowing - because subtle was never the goal.",
+    "In about 20 minutes, your smile can lift up to five shades with zero sensitivity.",
+    "Our vegan, cruelty-free formula whitens effectively without stripping enamel.",
+    "Quick, safe, and high-impact because subtle was never the goal.",
   ],
 };
 
@@ -116,11 +117,11 @@ export const permanentBrowsService = {
   name: "Petty Brows",
   price: "Limited time $250 (reg $600)",
   summary:
-    "Petty Brows offers custom Microblading, Nano Brows, Microshading, and Ombre Powder Brows - because your brows should never be basic.",
+    "Petty Brows offers custom Microblading, Nano Brows, Microshading, and Ombre Powder Brows for brows that always show up.",
   details: [
-    "Each technique is tailored to your face, skin type, and vibe, whether you want soft and natural, bold and defined, or perfectly powdered.",
-    "From hair-like strokes to seamless shading, we create long-lasting, low-maintenance brows that stay flawless 24/7.",
-    "Smudge-proof, sweat-proof, and effortlessly elevated - because waking up with perfect brows is the real flex.",
+    "Each technique is tailored to your face, skin type, and vibe, from soft and natural to bold and defined.",
+    "From hair-like strokes to seamless shading, we create long-lasting, low-maintenance brows.",
+    "Smudge-proof, sweat-proof, and effortlessly elevated for mornings that start ready.",
   ],
 };
 

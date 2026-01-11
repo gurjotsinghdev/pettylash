@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactDetails } from "@/app/data/contact";
 
 export default function ShopFooterSection() {
   return (
@@ -9,9 +10,9 @@ export default function ShopFooterSection() {
             Studio Pickup
           </h3>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-            18 Mercer Avenue, Suite 4B
+            {contactDetails.address[0]}
             <br />
-            Los Angeles, CA
+            {contactDetails.address[1]}
           </p>
         </div>
         <div>
@@ -30,9 +31,14 @@ export default function ShopFooterSection() {
             Support
           </h3>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-            Mon - Fri: 9am - 7pm
+            {contactDetails.hours.map((hour, index) => (
+              <span key={hour}>
+                {index > 0 ? <br /> : null}
+                {hour}
+              </span>
+            ))}
             <br />
-            support@pettylash.com
+            {contactDetails.email}
           </p>
         </div>
         <div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactDetails } from "@/app/data/contact";
 
 export default function HomeFooterSection() {
   return (
@@ -9,9 +10,9 @@ export default function HomeFooterSection() {
             Location
           </h3>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-            18 Mercer Avenue, Suite 4B
+            {contactDetails.address[0]}
             <br />
-            Los Angeles, CA
+            {contactDetails.address[1]}
           </p>
         </div>
         <div>
@@ -30,11 +31,12 @@ export default function HomeFooterSection() {
             Studio Hours
           </h3>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-            Mon - Fri: 9am - 7pm
-            <br />
-            Sat: 10am - 5pm
-            <br />
-            Sun: Closed
+            {contactDetails.hours.map((hour, index) => (
+              <span key={hour}>
+                {index > 0 ? <br /> : null}
+                {hour}
+              </span>
+            ))}
           </p>
         </div>
         <div>
@@ -42,9 +44,7 @@ export default function HomeFooterSection() {
             Contact
           </h3>
           <p className="mt-4 text-sm text-[color:var(--pl-ink)]/70">
-            (555) 019-2456
-            <br />
-            hello@pettylash.com
+            {contactDetails.email}
           </p>
           <button className="mt-4 rounded-full border border-[color:var(--pl-rose)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--pl-rose)]">
             Subscribe

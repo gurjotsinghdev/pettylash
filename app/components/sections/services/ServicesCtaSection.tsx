@@ -8,10 +8,10 @@ export default function ServicesCtaSection() {
           Ready to Book?
         </p>
         <h2 className="mt-4 text-3xl text-white sm:text-4xl">
-          Lock in your appointment with The Petty Beauty Lounge.
+          Request your appointment with The Petty Beauty Lounge.
         </h2>
         <p className="mt-4 text-sm text-white/70">
-          Tap below to connect with our booking team or reach out directly.
+          Share your preferred time and our team will confirm availability.
         </p>
         <Link
           href="/contact"
