@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { contactDetails } from "@/app/data/contact";
 
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Shop", href: "/products" },
+  { label: "Education", href: "/training" },
+  { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+];
+
 export default function ShopFooterSection() {
   return (
     <footer className="bg-[color:var(--pl-cream)] px-6 py-16">
@@ -50,48 +60,39 @@ export default function ShopFooterSection() {
           </p>
         </div>
       </div>
-      <div className="mx-auto mt-10 grid max-w-6xl gap-6 border-t border-[color:var(--pl-sand)] pt-6 text-xs uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/60 sm:grid-cols-[1fr_auto] sm:items-start">
-        <p>(c) 2025 Petty Lash</p>
-        <div className="text-right">
-          <p className="text-[10px] font-semibold tracking-[0.35em] text-[color:var(--pl-ink)]/70">
-            Quick Links
-          </p>
-          <div className="mt-3 flex flex-col gap-2">
-            <Link
-              href="/privacy-policy"
-              className="transition hover:text-[color:var(--pl-rose)]"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms-and-conditions"
-              className="transition hover:text-[color:var(--pl-rose)]"
-            >
-              Terms &amp; Conditions
-            </Link>
-            <Link
-              href="/contact"
-              className="transition hover:text-[color:var(--pl-rose)]"
-            >
-              Contact
-            </Link>
-          </div>
-          <p className="mt-4">
-            <Link
-              href="https://bragdeal.com/kelowna-web-design/"
-              className="transition hover:text-[color:var(--pl-rose)]"
-            >
-              Kelowna Web Design
-            </Link>{" "}
-            by{" "}
-            <Link
-              href="https://bragdeal.com"
-              className="transition hover:text-[color:var(--pl-rose)]"
-            >
-              BragDeal Inc.
-            </Link>
-          </p>
+      <div className="mx-auto mt-10 max-w-6xl border-t border-[color:var(--pl-sand)] pt-6 text-center text-[10px] uppercase tracking-[0.3em] text-[color:var(--pl-ink)]/60">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          {quickLinks.map((link, index) => (
+            <span key={link.href} className="flex items-center gap-2">
+              {index > 0 ? (
+                <span className="text-[color:var(--pl-ink)]/40">|</span>
+              ) : null}
+              <Link
+                href={link.href}
+                className="transition hover:text-[color:var(--pl-rose)]"
+              >
+                {link.label}
+              </Link>
+            </span>
+          ))}
         </div>
+        <p className="mt-4 flex flex-wrap items-center justify-center gap-2">
+          <span>(c) 2025 Petty Lash</span>
+          <span className="text-[color:var(--pl-ink)]/40">|</span>
+          <Link
+            href="https://bragdeal.com/kelowna-web-design/"
+            className="transition hover:text-[color:var(--pl-rose)]"
+          >
+            Kelowna Web Design
+          </Link>
+          <span className="text-[color:var(--pl-ink)]/60">by</span>
+          <Link
+            href="https://bragdeal.com"
+            className="transition hover:text-[color:var(--pl-rose)]"
+          >
+            BragDeal Inc.
+          </Link>
+        </p>
       </div>
     </footer>
   );
