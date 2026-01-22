@@ -3,5 +3,8 @@ export const contactDetails = {
   instagram: "@pettylashhh",
   email: "hello@pettylash.com",
   address: ["Kelowna, BC", "Canada"],
-  hours: ["By appointment only"],
+  hours: [
+    "Monday to Friday: 9:00 AM - 5:30 PM",
+    "Evenings and weekends: request-only (manual approval, fees may apply)",
+  ],
 };

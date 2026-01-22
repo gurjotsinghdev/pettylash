@@ -113,6 +113,21 @@ export const teethWhiteningService = {
   ],
 };
 
+export const browLaminationService = {
+  name: "PETTY BROWS - Brow Lamination & Tint",
+  summary:
+    "PETTY BROWS is the ultimate brow refresh. This service smooths, lifts, and sets the brow hairs into your desired shape while a custom tint adds depth and definition for a fuller, more polished look.",
+  details: [
+    "Brow lamination can last up to four weeks, depending on hair growth, skin type, and proper aftercare.",
+    "Results vary from client to client, but longevity comes down to aftercare - keep brows dry for the first 24 hours and maintain them with a nourishing brow oil to keep them lifted, glossy, and petty-perfect.",
+  ],
+  pricing: [
+    { name: "Brow Lamination + Tint / Touch Up (Combo)", price: "$115 (bundle & save)" },
+    { name: "Brow Lamination only", price: "$100" },
+    { name: "Brow Tint", price: "$25" },
+  ],
+};
+
 export const permanentBrowsService = {
   name: "Petty Brows",
   price: "Limited time $250 (reg $600)",

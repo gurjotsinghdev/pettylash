@@ -2,6 +2,7 @@ import ContactFormSection from "@/app/components/sections/contact/ContactFormSec
 import ContactHeaderSection from "@/app/components/sections/contact/ContactHeaderSection";
 import ContactHeroSection from "@/app/components/sections/contact/ContactHeroSection";
 import ContactInfoSection from "@/app/components/sections/contact/ContactInfoSection";
+import BookingPolicySection from "@/app/components/sections/contact/BookingPolicySection";
 import HomeFooterSection from "@/app/components/sections/home/HomeFooterSection";
 
 export default function ContactPage() {
@@ -10,6 +11,7 @@ export default function ContactPage() {
       <ContactHeaderSection />
       <ContactHeroSection />
       <ContactFormSection />
+      <BookingPolicySection />
       <ContactInfoSection />
       <HomeFooterSection />
     </div>

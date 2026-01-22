@@ -1,4 +1,5 @@
 import AddOnsSection from "@/app/components/sections/services/AddOnsSection";
+import BrowLaminationSection from "@/app/components/sections/services/BrowLaminationSection";
 import HairExtensionsSection from "@/app/components/sections/services/HairExtensionsSection";
 import HairMaintenanceSection from "@/app/components/sections/services/HairMaintenanceSection";
 import LashServicesSection from "@/app/components/sections/services/LashServicesSection";
@@ -25,6 +26,7 @@ export default function ServicesPage() {
       <HairExtensionsSection />
       <HairMaintenanceSection />
       <TeethWhiteningSection />
+      <BrowLaminationSection />
       <PermanentBrowsSection />
       <ServicesCtaSection />
       <HomeFooterSection />
